@@ -1,0 +1,116 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_valued
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240201\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-27 11:33+0000\n"
+"PO-Revision-Date: 2024-02-27 11:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_valued
+#: model_terms:ir.ui.view,arch_db:stock_picking_valued.report_delivery_document_inherit_stock_picking_valued
+msgid "<strong>Discount</strong>"
+msgstr "<strong>Remise</strong>"
+
+#. module: stock_picking_valued
+#: model_terms:ir.ui.view,arch_db:stock_picking_valued.report_delivery_document_inherit_stock_picking_valued
+msgid "<strong>Price Unit</strong>"
+msgstr "<strong>Prix Unitaire</strong>"
+
+#. module: stock_picking_valued
+#: model_terms:ir.ui.view,arch_db:stock_picking_valued.report_delivery_document_inherit_stock_picking_valued
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>Sous-Total</strong>"
+
+#. module: stock_picking_valued
+#: model_terms:ir.ui.view,arch_db:stock_picking_valued.report_delivery_document_inherit_stock_picking_valued
+msgid "<strong>Taxes</strong>"
+msgstr "<strong>Taxes</strong>"
+
+#. module: stock_picking_valued
+#: model:ir.model,name:stock_picking_valued.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_picking__currency_id
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_move__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: stock_picking_valued
+#: model_terms:ir.ui.view,arch_db:stock_picking_valued.view_picking_form_inherit_stock_picking_valued
+msgid "Disc.%"
+msgstr "Rem.%"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_move__discount
+msgid "Discount (%)"
+msgstr "Remise (%)"
+
+#. module: stock_picking_valued
+#: model:ir.model,name:stock_picking_valued.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Mouvements de produit (Ligne de mouvement de stock)"
+
+#. module: stock_picking_valued
+#: model:ir.model,name:stock_picking_valued.model_stock_move
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_move__price_subtotal
+msgid "Subtotal"
+msgstr "Sous-Total"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_picking__tax_totals
+msgid "Tax Totals"
+msgstr "Total Taxes"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_move__tax_id
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_picking__amount_tax
+msgid "Taxes"
+msgstr "Taxes"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_move__price_total
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_picking__amount_total
+#: model_terms:ir.ui.view,arch_db:stock_picking_valued.view_picking_form_inherit_stock_picking_valued
+msgid "Total"
+msgstr "Total"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_move__price_tax
+msgid "Total Tax"
+msgstr "Taxe Total"
+
+#. module: stock_picking_valued
+#: model:ir.model,name:stock_picking_valued.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_move__price_unit
+msgid "Unit Price"
+msgstr "Prix Unitaire"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_stock_picking__amount_untaxed
+msgid "Untaxed Amount"
+msgstr "Montant HT"
+
+#. module: stock_picking_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_res_partner__delivery_report_valued
+#: model:ir.model.fields,field_description:stock_picking_valued.field_res_users__delivery_report_valued
+msgid "Value the delivery note"
+msgstr "Valoriser le bon de livraison"
