@@ -1,6 +1,7 @@
 {
     'name': "Stock Picking Valued",
     'author': "Info'Lib",
+    'website': "https://www.infolib.tn/",
     'description': """
     Valuation of the delivery note report according to the client
     """,
