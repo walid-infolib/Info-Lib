@@ -4,7 +4,7 @@
     'description': """
        This module adds functionality for managing stamp tax in invoices.
     """,
-    "license": "OEEL-1",
+    "license": "OPL-1",
     "price": 4.94,
     'author': "Infolib",
     'website': "https://www.infolib.tn/",
