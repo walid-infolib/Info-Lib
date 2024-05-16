@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="report_account_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//t[@name='account_invoice_line_accountable']" position="attributes">
+            <attribute name="t-if">line.display_type == 'product' and all(tax.id != 13 for tax in line.tax_ids)
+            </attribute>
+        </xpath>
+    </template>
+</odoo>
