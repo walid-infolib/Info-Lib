@@ -12,7 +12,7 @@ This Module will allow you to check the tax registration number of your customer
     """,
     'depends': ['base_vat'],
     'installable': True,
-    'auto_install': False,
+    "license": "LGPL-3",
     "images": [
         "images/infolib_tn.png",
         ],
