@@ -6,7 +6,7 @@
     """,
     "license": "OPL-1",
     "price": 4.94,
-    'author': "Infolib",
+    'author': "Info'Lib",
     'website': "https://www.infolib.tn/",
     'category': 'Accounting',
     'version': '17.0.0.0.0',
