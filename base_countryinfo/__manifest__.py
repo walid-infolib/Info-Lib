@@ -1,5 +1,5 @@
 {
-    "name": "CountryInfo",
+    "name": "Country states/provinces Loader",
     'version': '17.0.0.0.0',
     "author": "Info'Lib",
     "website": "https://www.infolib.tn/",
