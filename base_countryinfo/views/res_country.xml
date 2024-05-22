@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_country_form_inherit_base_countryinfo" model="ir.ui.view">
+        <field name="name">res.country.provinces</field>
+        <field name="model">res.country</field>
+        <field name="inherit_id" ref="base.view_country_form"/>
+        <field name="arch" type="xml">
+            <sheet position="before">
+                <header>
+                    <button string="Get Provinces" name="get_provinces" type="object"/>
+                </header>
+            </sheet>
+        </field>
+    </record>
+</odoo>
