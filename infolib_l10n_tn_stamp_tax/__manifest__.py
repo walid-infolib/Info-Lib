@@ -1,5 +1,5 @@
 {
-    'name': "Tax Stamp - Timbre Fiscal",
+    'name': "Tunisian: Tax Stamp - Timbre Fiscal",
     'summary': """Tax Stamp on Customer/supplier invoices""",
     'description': """
        This module adds functionality for managing stamp tax in invoices.
