@@ -11,6 +11,6 @@
     'installable': True,
     "license": "LGPL-3",
     "images": [
-        "images/infolib_tn.png",
+        "images/infolib_tn.jpg",
         ],
 }
