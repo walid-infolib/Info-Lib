@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_countryinfo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240311\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-22 11:53+0000\n"
+"PO-Revision-Date: 2024-05-22 11:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_countryinfo
+#: model:ir.model,name:base_countryinfo.model_res_country
+msgid "Country"
+msgstr "Pays"
+
+#. module: base_countryinfo
+#. odoo-python
+#: code:addons/base_countryinfo/models/res_country.py:0
+#, python-format
+msgid "Country not found."
+msgstr "Pays introuvable."
+
+#. module: base_countryinfo
+#: model_terms:ir.ui.view,arch_db:base_countryinfo.view_country_form_inherit_base_countryinfo
+msgid "Get Provinces"
+msgstr "Obtenir les provinces"
