@@ -1,5 +1,6 @@
 {
     'name': "Stock Picking Valued",
+    'version': '17.0.0.0.1',
     'author': "Info'Lib",
     'website': "https://www.infolib.tn/",
     'category': 'Sales/Sales',

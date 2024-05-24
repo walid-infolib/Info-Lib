@@ -1,6 +1,6 @@
 from odoo import models, fields, api
 
-from odoo17.odoo.tools import float_is_zero
+from odoo.odoo.tools import float_is_zero
 
 
 class StockMove(models.Model):
