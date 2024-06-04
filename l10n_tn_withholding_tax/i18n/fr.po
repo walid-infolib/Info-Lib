@@ -1,0 +1,302 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_tn_withholding_tax
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240311\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-03 16:29+0000\n"
+"PO-Revision-Date: 2024-06-03 16:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.actions.report,print_report_name:l10n_tn_withholding_tax.action_report_withholding_account
+msgid "('Withholding Tax - %s' % (object.name))"
+msgstr "('Retenue à la source - %s' % (object.name))"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.l10n_tn_withholding_tax_view_account_payment_form
+msgid "<span class=\"o_stat_text\">Journal Entry withholding</span>"
+msgstr "<span class=\"o_stat_text\">Journal retenue à la source</span>"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "<strong>Grand Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "<strong>Tunis the :</strong>"
+msgstr "<strong>Tunis le :</strong>"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "A - PAYING AGENCY"
+msgstr "A - ORGANISME PAYEUR"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "ADDRESS:"
+msgstr "ADDRESSE:"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__amount
+msgid "Amount"
+msgstr "MONTANT"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "B - WITHHOLDING APPLIED ON :"
+msgstr "B - Retenues effectuees sur :"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "BUSINESS ADDRESS:"
+msgstr "ADRESSE PROFESSIONNELLE:"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "C- BENEFICIARY:"
+msgstr "C- BENEFICAIRE:"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "CATEG. CODE"
+msgstr "CODE CATEG."
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid ""
+"CERTIFICATE OF TAX WITHHOLDING ON INCOME OF INDIVIDUALS OR TAX\n"
+"                                        ON COMPANIES"
+msgstr ""
+"CERTIFICAT DE RETENUE D'IMPOT SUR LES REVENUS DES PERSONNES PHYSIQUES OU D'IMPOT\n"
+"                                        SUR LES SOCIETES"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model,name:l10n_tn_withholding_tax.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__account_customer_id
+msgid "Customer Account"
+msgstr "Compte Client"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__designation
+msgid "Designation"
+msgstr "Désignation"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__display_name
+msgid "Display Name"
+msgstr "Nom"
+
+#. module: l10n_tn_withholding_tax
+#. odoo-python
+#: code:addons/l10n_tn_withholding_tax/models/res_partner.py:0
+#, python-format
+msgid ""
+"Error ! %r VAT number must respect this nomenclature (exp: 1234567Y/A/M/000)"
+msgstr ""
+"Erreur ! La matricule TVA de %r doit respecter cette nomenclature (exp : "
+"1234567Y/A/M/000)"
+
+#. module: l10n_tn_withholding_tax
+#. odoo-python
+#: code:addons/l10n_tn_withholding_tax/report/report_withholding_tax_structure.py:0
+#, python-format
+msgid "Error ! You should specify a withholding tax."
+msgstr "Erreur ! Vous devez spécifier une retenue à la source."
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "FIRST NAME, LAST NAME, OR COMPANY NAME:"
+msgstr "NOM, PRENOM, OU RAISON SOCIALE:"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "GROSS"
+msgstr "MONTANT BRUT"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_tn_withholding_tax
+#. odoo-python
+#: code:addons/l10n_tn_withholding_tax/models/account_payment.py:0
+#, python-format
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "MF 1560862"
+msgstr ""
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "MF:"
+msgstr ""
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "NAME PAYING AGENCY:"
+msgstr "DENOMINATION ORGANISME PAYEUR:"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "NET"
+msgstr "MONTANT NET"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__name
+msgid "Name"
+msgstr "NOM"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model,name:l10n_tn_withholding_tax.model_account_payment
+msgid "Payments"
+msgstr "Paiements"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model,name:l10n_tn_withholding_tax.model_account_payment_register
+msgid "Register Payment"
+msgstr "Enregistrer un paiement"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "SECONDARY ESTABLI."
+msgstr "ETABLIS. SECONDAIRE"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "SKWERE ADS"
+msgstr ""
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "Stamp and signature of the payer"
+msgstr "Cachet et signature du payeur"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_withholding_tax__account_supplier_id
+msgid "Supplier Account"
+msgstr "Compte Fournisseur"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "TAX REGISTRATION NUMBER"
+msgstr "MATRICULE FISCALE"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid ""
+"UNDERSIGNED, CERTIFY THAT THE INFORMATION APPEARING ON THIS CERTIFICATE IS\n"
+"                                ACCURATE AND SUBJECT ME TO THE SANCTIONS PROVIDED FOR BY LAW FOR ANY INACCURACY."
+msgstr ""
+"Soussigne, certifie exacts les renseignements figurant sur le present certificat et\n"
+"                                m'expose aux sanctions prevues par la loi pour toute inexactitude."
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "VAT CODE"
+msgstr "CODE TVA"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "WITHHOLDING"
+msgstr "RETENUE"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "WITHHOLDING MADE ON:"
+msgstr "RETENUE EFFECTUEE LE:"
+
+#. module: l10n_tn_withholding_tax
+#. odoo-python
+#: code:addons/l10n_tn_withholding_tax/models/account_payment.py:0
+#, python-format
+msgid "Wihholding Tax %s - %s - %s"
+msgstr "retenue à la source %s - %s - %s"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model,name:l10n_tn_withholding_tax.model_withholding_tax
+msgid "Withholding Tax"
+msgstr "Retenue à la source"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model,name:l10n_tn_withholding_tax.model_report_l10n_tn_withholding_tax_report_withholding_tax_structure
+msgid "Withholding Tax Report"
+msgstr "Etat de retenue d'impôt"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_account_payment__withholding_journal_id
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_account_payment_register__withholding_journal_id
+msgid "Withholding journal"
+msgstr "Journal retenue"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_account_payment__withholding_move_id
+msgid "Withholding move"
+msgstr "Pièce Comptable Retenue"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.actions.act_window,name:l10n_tn_withholding_tax.l10n_tn_withholding_tax_menu_action
+#: model:ir.actions.report,name:l10n_tn_withholding_tax.action_report_withholding_account
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_account_payment__withholding_tax_id
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_account_payment_register__withholding_tax_id
+#: model:ir.ui.menu,name:l10n_tn_withholding_tax.configuration_withholding_tax_menu
+msgid "Withholding tax"
+msgstr "Retenue à la source"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_account_payment__withholding_amount
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_account_payment_register__withholding_amount
+msgid "Withholding tax amount"
+msgstr "Montant retenue à la source"
+
+#. module: l10n_tn_withholding_tax
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_account_payment__amount_net
+#: model:ir.model.fields,field_description:l10n_tn_withholding_tax.field_account_payment_register__amount_net
+msgid "Withholding tax net"
+msgstr "Montant net retenue à la source"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "example"
+msgstr "exemple"
+
+#. module: l10n_tn_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_tn_withholding_tax.report_withholding_tax_structure
+msgid "withholding"
+msgstr "Retenue"
