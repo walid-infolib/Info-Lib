@@ -226,7 +226,7 @@ msgstr "Date de déclaration"
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__display_name
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss_line__display_name
 msgid "Display Name"
-msgstr "Afficher un nom"
+msgstr "Afficher le nom"
 
 #. module: cnss_declaration
 #: model:ir.model.fields.selection,name:cnss_declaration.selection__hr_cnss__state__done
@@ -449,7 +449,7 @@ msgstr "Numéro de bureau"
 #. module: cnss_declaration
 #: model_terms:ir.ui.view,arch_db:cnss_declaration.report_cnss_declaration
 msgid "Order No."
-msgstr "N ° de commande"
+msgstr "N° Ordre"
 
 #. module: cnss_declaration
 #: model:hr.contract.type,name:cnss_declaration.contract_type_ordianry

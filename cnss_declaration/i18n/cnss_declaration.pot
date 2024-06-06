@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-03 15:49+0000\n"
-"PO-Revision-Date: 2024-06-03 15:49+0000\n"
+"POT-Creation-Date: 2024-06-06 15:24+0000\n"
+"PO-Revision-Date: 2024-06-06 15:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -49,12 +49,12 @@ msgstr "3ème mois"
 #. module: cnss_declaration
 #: model_terms:ir.ui.view,arch_db:cnss_declaration.report_cnss_declaration
 msgid "<b>NAME AND ADDRESS OF THE EMPLOYER</b>"
-msgstr ""
+msgstr "<b>NOM ET ADRESSE DE L'EMPLOYEUR</b>"
 
 #. module: cnss_declaration
 #: model_terms:ir.ui.view,arch_db:cnss_declaration.report_cnss_declaration
 msgid "<b>Total to carry forward</b>"
-msgstr "<b>NOM ET ADRESSE DE L'EMPLOYEUR</b>"
+msgstr "<b>Total à reporter</b>"
 
 #. module: cnss_declaration
 #: model_terms:ir.ui.view,arch_db:cnss_declaration.report_cnss_declaration
@@ -101,7 +101,6 @@ msgid ""
 msgstr ""
 "<span><b>REPUBLIQUE TUNISIENNE<br/>MINISTERE DES AFFAIRES SOCIALES </b><br/>\n"
 "                                                    CAISSE NATIONALE DE SECURITE SOCIALE<br/>49. Av. TAIEB MHIRI - TUNIS- Tel : 71. 796. 744<br/></span>"
-
 #. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__message_needaction
 msgid "Action Needed"
@@ -140,7 +139,7 @@ msgstr "BR :"
 #. module: cnss_declaration
 #: model:ir.ui.menu,name:cnss_declaration.cnss_menu
 msgid "CNSS Declaration"
-msgstr "Déclaration CNSS"
+msgstr "Cnss"
 
 #. module: cnss_declaration
 #: model_terms:ir.ui.view,arch_db:cnss_declaration.view_cnss_form
@@ -156,16 +155,14 @@ msgstr "Taux de salaire CNSS"
 
 #. module: cnss_declaration
 #: model:ir.model.fields,help:cnss_declaration.field_hr_cnss__quarter
-msgid ""
-"Choose the quarter of the quarterly declaration of employees and wages  "
+msgid "Choose the quarter of the quarterly declaration of employees and wages"
 msgstr ""
-"Choisissez le trimestre de la déclaration trimestrielle des salariés et des "
-"salaires "
+
 #. module: cnss_declaration
 #: model:ir.model.fields,help:cnss_declaration.field_hr_cnss__year
 msgid "Choose the year of the quarterly declaration of employees and wages  "
 msgstr ""
-"Choisissez l'année de la déclaration trimestrielle des salariés et des "
+"Choisissez le trimestre de la déclaration trimestrielle des salariés et des "
 "salaires "
 #. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss_line__cnss_id
@@ -214,8 +211,8 @@ msgid "Currency"
 msgstr "Devise"
 
 #. module: cnss_declaration
-#: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__date_of_declaration
-#: model:ir.model.fields,help:cnss_declaration.field_hr_cnss__date_of_declaration
+#: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__date
+#: model:ir.model.fields,help:cnss_declaration.field_hr_cnss__date
 msgid "Date Of Declaration"
 msgstr "Date de déclaration"
 
@@ -223,7 +220,7 @@ msgstr "Date de déclaration"
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__display_name
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss_line__display_name
 msgid "Display Name"
-msgstr "Afficher un nom"
+msgstr "Afficher le nom"
 
 #. module: cnss_declaration
 #: model:ir.model.fields.selection,name:cnss_declaration.selection__hr_cnss__state__done
@@ -234,6 +231,11 @@ msgstr "Fait"
 #: model:ir.model.fields.selection,name:cnss_declaration.selection__hr_cnss__state__draft
 msgid "Draft"
 msgstr "Brouillon"
+
+#. module: cnss_declaration
+#: model:hr.contract.type,name:cnss_declaration.contract_type_ex2
+msgid "EX 2"
+msgstr "EX 2"
 
 #. module: cnss_declaration
 #: model:ir.model,name:cnss_declaration.model_hr_employee
@@ -255,6 +257,13 @@ msgid "Employer cnss rate"
 msgstr "Tarif cnss employeur"
 
 #. module: cnss_declaration
+#. odoo-python
+#: code:addons/cnss_declaration/models/hr_cnss.py:0
+#, python-format
+msgid "Exploit Code in the contrat type is empty"
+msgstr "Le code d'exploitation dans le type de contrat est vide"
+
+#. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_contract_type__exploit_code
 #: model:ir.model.fields,help:cnss_declaration.field_hr_contract_type__exploit_code
 msgid "Exploit code"
@@ -271,11 +280,6 @@ msgid "FOPROLOS"
 msgstr "FOPROLOS"
 
 #. module: cnss_declaration
-#: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__file_name
-msgid "File Name"
-msgstr "Nom de fichier"
-
-#. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__message_follower_ids
 msgid "Followers"
 msgstr "Abonnés"
@@ -288,17 +292,12 @@ msgstr "Abonnés (partenaires)"
 #. module: cnss_declaration
 #: model:ir.model.fields,help:cnss_declaration.field_hr_cnss__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "Icône géniale de police, par exemple. tâches fat"
+msgstr "Icône géniale de police, par exemple. fa-tasks"
 
 #. module: cnss_declaration
 #: model_terms:ir.ui.view,arch_db:cnss_declaration.view_cnss_form
 msgid "Generate file"
 msgstr "Générer le fichier"
-
-#. module: cnss_declaration
-#: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__info_text
-msgid "Generated Info"
-msgstr "Informations générées"
 
 #. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__has_message
@@ -329,8 +328,8 @@ msgstr "Identité de l'employé"
 #. module: cnss_declaration
 #: model:ir.model.fields,help:cnss_declaration.field_hr_cnss__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Si cette case est cochée, les nouveaux messages nécessitent votre attention."
-
+msgstr ""
+"Si cette case est cochée, les nouveaux messages nécessitent votre attention."
 #. module: cnss_declaration
 #: model:ir.model.fields,help:cnss_declaration.field_hr_cnss__message_has_error
 #: model:ir.model.fields,help:cnss_declaration.field_hr_cnss__message_has_sms_error
@@ -341,6 +340,11 @@ msgstr "Si coché, certains messages ont une erreur de transmission."
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__message_is_follower
 msgid "Is Follower"
 msgstr "Est un suiveur"
+
+#. module: cnss_declaration
+#: model:hr.contract.type,name:cnss_declaration.contract_type_karama
+msgid "Karama"
+msgstr "Karama"
 
 #. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__write_uid
@@ -441,6 +445,11 @@ msgid "Order No."
 msgstr "N° Ordre"
 
 #. module: cnss_declaration
+#: model:hr.contract.type,name:cnss_declaration.contract_type_ordianry
+msgid "Ordinary"
+msgstr "Ordinaire"
+
+#. module: cnss_declaration
 #: model_terms:ir.ui.view,arch_db:cnss_declaration.report_cnss_declaration
 msgid "Page N°:"
 msgstr "Page N°:"
@@ -467,7 +476,7 @@ msgstr "DECLARATION TRIMESTRIELLE DES SALARIES ET DES SALAIRES"
 #. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__quarter
 msgid "Quarter"
-msgstr "Trimestre
+msgstr "Trimestre"
 
 #. module: cnss_declaration
 #: model_terms:ir.ui.view,arch_db:cnss_declaration.report_cnss_declaration
@@ -490,16 +499,27 @@ msgid "Responsible User"
 msgstr "Utilisateur responsable"
 
 #. module: cnss_declaration
+#: model:hr.contract.type,name:cnss_declaration.contract_type_sivp
+msgid "SIVP"
+msgstr "SIVP"
+
+#. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr "Erreur d'envoi de SMS"
 
 #. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss_line__ssnid
-#: model:ir.model.fields,field_description:cnss_declaration.field_hr_employee__ssnid
 #: model:ir.model.fields,field_description:cnss_declaration.field_res_company__ssnid
 msgid "SSN No"
 msgstr "Numéro de sécurité sociale"
+
+#. module: cnss_declaration
+#. odoo-python
+#: code:addons/cnss_declaration/models/hr_cnss.py:0
+#, python-format
+msgid "SSN N° Company is empty"
+msgstr "Le N° SSN de l'entreprise est vide"
 
 #. module: cnss_declaration
 #: model:ir.model.fields,help:cnss_declaration.field_hr_contract_type__foprolos
@@ -508,7 +528,6 @@ msgstr "Fonds de promotion du logement social"
 
 #. module: cnss_declaration
 #: model:ir.model.fields,help:cnss_declaration.field_hr_cnss_line__ssnid
-#: model:ir.model.fields,help:cnss_declaration.field_hr_employee__ssnid
 #: model:ir.model.fields,help:cnss_declaration.field_res_company__ssnid
 msgid "Social Security Number"
 msgstr "Numéro de sécurité sociale"
@@ -572,7 +591,7 @@ msgstr "Total"
 
 #. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__total_sum
-msgid "Total_sum"
+msgid "Total sum"
 msgstr "Total_sum"
 
 #. module: cnss_declaration
@@ -593,12 +612,12 @@ msgstr "Historique des communications du site Web"
 #. module: cnss_declaration
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_cnss__year
 msgid "Year"
-msgstr ""
+msgstr "Année"
 
 #. module: cnss_declaration
 #: model_terms:ir.ui.view,arch_db:cnss_declaration.report_cnss_declaration
 msgid "Year:"
-msgstr "Année"
+msgstr "Année:"
 
 #. module: cnss_declaration
 #. odoo-python
