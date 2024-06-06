@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_cnss_declaration">
+        <t t-call="web.html_container">
+            <t t-set="pages" t-value="set(docs[0].line_ids.mapped('page'))"></t>
+            <t t-foreach="pages" t-as="page">
+                <t t-set="total_page" t-value="0" />
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.basic_layout">
+                <div class="page">
+                    <style>
+                        thead { display: table-header-group;}
+                        #table_border {border: 2px solid black; font-size: 14px;}
+                        th{ text-align: center; vertical-align: middle;}
+                        .cnss_table>thead>tr>td, .cnss_table>thead>tr>td>div{
+                            padding: 0px;
+                        }
+                        .cnss_table>tbody>tr>td{
+                            padding: 4px;
+                        }
+                    </style>
+
+                        <div t-attf-class="content">
+                            <div class="row mb8">
+                                <table class="table table-bordered cnss_table">
+                                     <thead>
+                                        <tr class="border border-white" style="text-align: center;">
+                                            <td colspan="2" style="font-size: 10px;"><div><span><b>TUNISIAN REPUBLIC<br/>MINISTRY OF SOCIAL AFFAIRS</b><br/>
+                                                    NATIONAL SOCIAL SECURITY FUND<br/>49. Av. TAIEB MHIRI - TUNIS- Tel : 71. 796. 744<br/></span></div>
+                                            </td>
+                                            <td colspan="8"><div><h3>QUARTERLY DECLARATION OF EMPLOYEES AND SALARIES</h3><p>must be returned to the Fund under penalty of penalties within the first
+                                                    15 days following the quarter</p></div>
+                                            </td>
+                                        </tr>
+                                         <tr class="border border-white text-end"><td colspan="8"><div><b>NAME AND ADDRESS OF THE EMPLOYER</b></div></td></tr>
+                                         <tr class="border border-white">
+                                             <td colspan="2">
+                                                 <div><table class="table table-bordered" id="table_border">
+                                                    <tr id="table_border"><td colspan="2">No. Employer: <span t-field="o.company_id.ssnid"/></td></tr>
+                                                     <tr id="table_border"><td id="table_border">BR : <span t-field="o.company_id.br"/></td><td>Page N°: <span t-esc="page"/></td></tr>
+                                                    <tr id="table_border"><td id="table_border">Quarter: <span t-field="o.quarter"/></td><td>Year: <span t-field="o.year"/></td></tr></table>
+                                                 </div>
+                                             </td>
+                                             <td>
+                                                 <div style="margin-left:1rem; width: 70%"><table class="table table-bordered" style="text-align: center; height:120px;" id="table_border">
+                                                        <tr id="table_border"><td>Exploit code<br/><span t-field="o.contract_type_id.exploit_code"/></td></tr>
+                                                        <tr><td>Tax identification number<br/><span t-field="o.company_id.vat"/></td></tr>
+                                                 </table></div>
+                                             </td>
+                                             <td colspan="8">
+                                                 <div style="width: 100%"><table class="table table-bordered" id="table_border" style="height:120px;">
+                                                        <tr><td><b><i>Company<span t-field="o.company_id.name"/></i></b><br/>
+                                                        <i><span t-field="o.company_id.street"/></i></td></tr>
+                                                 </table></div>
+                                             </td>
+                                        </tr>
+                                        <tr id="table_border">
+                                            <th rowspan="2" id="table_border" style="width: 30px;">Order No.</th>
+                                            <th rowspan="2" id="table_border" >Cnss Number</th>
+                                            <th rowspan="2" id="table_border">Identity OF The Employee</th>
+                                            <th rowspan="2" id="table_border" style="width: 50px">No. at the Employer</th>
+                                            <th rowspan="2" id="table_border" style="width: 50px">Professional category</th>
+                                            <th colspan="3">MONTHLY PAY</th>
+                                            <th rowspan="2" id="table_border">Total</th>
+                                        </tr>
+                                         <tr style="text-align: center;">
+                                            <td id="table_border">1st month</td>
+                                            <td id="table_border">2nd month</td>
+                                            <td id="table_border">3rd month</td>
+                                         </tr>
+                                    </thead>
+                                    <tbody id="table_border">
+                                        <tr t-foreach="o.line_ids.filtered(lambda line: line.page ==page)" t-as="lines" style="height: 29.5px;">
+                                            <td style="text-align: center;"><span t-field="lines.line"/></td>
+                                            <td><span t-field="lines.ssnid"/></td>
+                                            <td><span t-field="lines.employee_id"/></td>
+                                            <td><span t-field="lines.registration_number"/></td>
+                                            <td><span t-field="lines.pro_category"/></td>
+                                            <td style="text-align: right"><span t-field="lines.gross_1"/></td>
+                                            <td style="text-align: right"><span t-field="lines.gross_2"/></td>
+                                            <td style="text-align: right"><span t-field="lines.gross_3"/></td>
+                                            <td style="text-align: right"><span t-field="lines.total"/></td>
+                                            <t t-set="total_page" t-value="total_page + lines.total" />
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                            <div class="footer">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <small>
+                                            <span style="border-bottom: 1px solid black;">Certified sincere and in compliance with our accounting documents and
+                                                settled at the sum of: (in words) (2)</span><br/><br/>
+                                            <b>(1) the identity must be consistent with the insurance card or birth certificate.</b><br/>
+                                            <b>(2) The order must correspond to the total salaries declared during the quarter (to be indicated on the last page).</b><span/>
+
+                                        </small>
+                                    </div>
+                                    <div class="col-4" style="text-align: center">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <td class="border border-white" style="text-align: right"><b>Total</b></td>
+                                                <td style="border: 2px solid black; text-align: right;"><span t-esc="total_page" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/></td>
+                                            </tr>
+                                            <tr t-if="page == len(pages)" id="general_total">
+                                                <td class="border border-white" style="text-align: right"><b>Total to carry forward</b></td>
+                                                <td style="border: 2px solid black; text-align: right"><span t-field="o.total_sum"/></td>
+                                            </tr>
+                                        </table>
+                                        <small>
+                                            <b>Done in …………..………….….. on ……………..………….. 20……….</b><br/>
+                                            <b>Company stamp and signature</b><br/>
+                                            <b>(on all pages)</b><br/>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="report_cnss_declaration_template" model="ir.actions.report">
+        <field name="name">Report cnss declaration with table </field>
+        <field name="model">hr.cnss</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">cnss_declaration.report_cnss_declaration</field>
+        <field name="report_file">cnss_declaration.report_cnss_declaration</field>
+        <field name="print_report_name">'CNSS Declaration %s - %s' % ((object.quarter),(object.year))</field>
+        <field name="binding_model_id" ref="model_hr_cnss"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="cnss_declaration.paperformat_cnss"/>
+    </record>
+</odoo>

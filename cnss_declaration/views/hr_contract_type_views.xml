@@ -1,0 +1,35 @@
+<odoo>
+    <record id="hr_contract_type_view_tree_inherit_cnss_declaration" model="ir.ui.view">
+        <field name="name">hr.contract.type.inherit</field>
+        <field name="model">hr.contract.type</field>
+        <field name="inherit_id" ref="hr.hr_contract_type_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='code']" position="after">
+                <field name="exploit_code"/>
+                <field name="cnss_salary_rate"/>
+                <field name="employer_cnss_rate"/>
+                <field name="tfp"/>
+                <field name="foprolos"/>
+                <field name="taxable"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_contract_type_view_form_inherit_cnss_declaration" model="ir.ui.view">
+        <field name="name">hr.contract.type.inherit</field>
+        <field name="model">hr.contract.type</field>
+        <field name="inherit_id" ref="hr.hr_contract_type_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group/group" position="after">
+                <group name="group_cnss_declaration">
+                    <field name="exploit_code"/>
+                    <field name="cnss_salary_rate"/>
+                    <field name="employer_cnss_rate"/>
+                    <field name="tfp"/>
+                    <field name="foprolos"/>
+                    <field name="taxable"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
