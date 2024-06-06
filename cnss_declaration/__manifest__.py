@@ -20,5 +20,5 @@
     'installable': True,
     'license': 'OPL-1',
     'price': 94.08,
-    'images': ['static/description/icon.png']
+    'images': ['static/description/cover_540_270.png']
 }
