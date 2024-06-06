@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="sms_composer_view_form" model="ir.ui.view">
+        <field name="model">sms.composer</field>
+        <field name="inherit_id" ref="sms.sms_composer_view_form"/>
+        <field name="arch" type="xml">
+            <field name="sanitized_numbers" position="after">
+                <field name="provider"/>
+            </field>
+        </field>
+    </record>
+</odoo>
