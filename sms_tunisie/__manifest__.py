@@ -1,5 +1,5 @@
 {
-    "name": "SMS Tunisie",
+    "name": "Tunisie SMS",
     "version": "17.0",
     "depends": ["sms", "iap_alternative_provider"],
     "author": "Info'Lib",
