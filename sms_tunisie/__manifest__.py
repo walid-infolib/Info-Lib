@@ -5,7 +5,7 @@
     "author": "Info'Lib",
     "description": "Tunisie SMS"
                    " you can integrate sms_tunisie into your interface by simply clicking on the installer button",
-    "license": "LGPL-3",
+    "license": "AGPL-3",
     'website': "https://www.infolib.tn/",
 
     "data": [
