@@ -16,6 +16,6 @@ Check if an email is valid, properly formatted and really exists
     'installable': True,
     "license": "LGPL-3",
     "images": [
-        "images/infolib_tn.png",
+        "images/infolib_tn.jpg",
         ],
 }
