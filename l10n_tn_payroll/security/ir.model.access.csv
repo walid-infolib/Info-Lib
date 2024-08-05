@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_collective_agreement_user,access_collective_agreement_user,model_collective_agreement,base.group_user,1,1,1,1
+access_collective_category_user,access_collective_category_user,model_collective_category,base.group_user,1,1,1,1
+access_collective_level_user,access_collective_level_user,model_collective_level,base.group_user,1,1,1,1
+access_hr_employee_agreement_user,access_hr_employee_agreement_user,model_hr_employee_agreement,base.group_user,1,1,1,1

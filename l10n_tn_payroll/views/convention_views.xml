@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_collective_agreement_form" model="ir.ui.view">
+        <field name="name">collective.agreement.form</field>
+        <field name="model">collective.agreement</field>
+        <field name="arch" type="xml">
+            <form string="Collective Agreement">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="date_effective"/>
+                        <field name="description"/>
+                    </group>
+                    <field name="category_ids" nolabel="1">
+                        <tree string="Categories">
+                            <field name="name"/>
+                        </tree>
+                        <form string="Category">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <field name="level_ids" nolabel="1">
+                            <tree string="Levels" editable="bottom">
+                                <field name="name"/>
+                                <field name="salary"/>
+                                <field name="seniority"/>
+                            </tree>
+                        </field>
+                    </form>
+                </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_collective_agreement_tree" model="ir.ui.view">
+        <field name="name">collective.agreement.tree</field>
+        <field name="model">collective.agreement</field>
+        <field name="arch" type="xml">
+            <tree string="Collective Agreements">
+                <field name="name"/>
+                <field name="date_effective"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="action_collective_agreement" model="ir.actions.act_window">
+        <field name="name">Collective Agreements</field>
+        <field name="res_model">collective.agreement</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_collective_agreement"
+              name="Agreements"
+              parent="hr_payroll.menu_hr_salary_configuration"
+              action="action_collective_agreement"
+              sequence="11"
+    />
+
+    <!--          Convention Details          -->
+
+    <record id="view_collective_level_tree" model="ir.ui.view">
+        <field name="name">collective.level.tree</field>
+        <field name="model">collective.level</field>
+        <field name="arch" type="xml">
+            <tree string="Collective Agreements Details" editable="bottom">
+                <field name="agreement_id"/>
+                <field name="category_id"/>
+                <field name="name"/>
+                <field name="salary"/>
+                <field name="seniority"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="action_collective_level" model="ir.actions.act_window">
+        <field name="name">Collective Levels</field>
+        <field name="res_model">collective.level</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_collective_level"
+              name="Agreements Details"
+              parent="hr_payroll.menu_hr_salary_configuration"
+              action="action_collective_level"
+              sequence="12"
+    />
+
+    <!--          Collective agreement history          -->
+
+    <record id="view_hr_employee_agreement_tree" model="ir.ui.view">
+        <field name="name">hr.employee.agreement.tree</field>
+        <field name="model">hr.employee.agreement</field>
+        <field name="arch" type="xml">
+            <tree string="Collective agreement history" editable="top">
+                <field name="employee_id"/>
+                <field name="level_id"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="action_hr_employee_agreement" model="ir.actions.act_window">
+        <field name="name">Collective Agreement History</field>
+        <field name="res_model">hr.employee.agreement</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_hr_employee_agreement"
+              name="Collective Agreement History"
+              parent="hr_payroll.menu_hr_payroll_employees_root"
+              action="action_hr_employee_agreement"
+              sequence="31"
+    />
+
+</odoo>
