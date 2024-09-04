@@ -15,7 +15,7 @@
         'views/hr_employee_views.xml',
         'views/hr_payroll_structure_type_views.xml',
     ],
-    'installable': True,
+    'installable': False,
     'license': 'OPL-1',
     'price': 100,
     'images': ['static/description/cover_540_270.png']

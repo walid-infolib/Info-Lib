@@ -154,7 +154,7 @@ msgstr "Déclaration CNSS"
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_contract_type__cnss_salary_rate
 #: model:ir.model.fields,help:cnss_declaration.field_hr_contract_type__cnss_salary_rate
 msgid "CNSS salary rate"
-msgstr "Taux de salaire CNSS"
+msgstr "Taux CNSS salarial"
 
 #. module: cnss_declaration
 #: model:ir.model.fields,help:cnss_declaration.field_hr_cnss__quarter
@@ -260,7 +260,7 @@ msgstr "L'Employé %s n'a pas de numéro d'identification!"
 #: model:ir.model.fields,field_description:cnss_declaration.field_hr_contract_type__employer_cnss_rate
 #: model:ir.model.fields,help:cnss_declaration.field_hr_contract_type__employer_cnss_rate
 msgid "Employer cnss rate"
-msgstr "Tarif cnss employeur"
+msgstr "Taux CNSS patronal"
 
 #. module: cnss_declaration
 #. odoo-python
