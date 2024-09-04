@@ -54,7 +54,7 @@ class SaleOrderDiscount(models.TransientModel):
                         product=discount_product,
                         amount=subtotal * discount_percentage_for_group / 100,
                         taxes=taxes,
-                        description=_("Discount: %(percent)s%%", percent=round(discount_percentage_for_group, 2))
+                        description=_("Discount: %(percent)s%%", percent=discount_percentage_for_group)
                     ),
                 }]
             else:
@@ -74,12 +74,12 @@ class SaleOrderDiscount(models.TransientModel):
                     vals_list.append(
                         self._prepare_discount_line_values(
                             product=discount_product,
-                            amount=round(subtotal * discount_percentage_for_group / 100,2),
+                            amount=subtotal * discount_percentage_for_group / 100,
                             taxes=tax,
                             description=_(
                                 "Discount: %(percent)s%%"
                                 "- On products with the following taxes %(taxes)s",
-                                percent=round(discount_percentage_for_group, 2),
+                                percent=discount_percentage_for_group,
                                 taxes=tax.name
                             ),
                         )
