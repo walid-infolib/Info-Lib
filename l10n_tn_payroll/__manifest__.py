@@ -21,6 +21,6 @@
     ],
     'installable': True,
     'license': 'OPL-1',
-    "price": 500,
+    'price': 500,
     'images': ['static/description/cover_540_270_paie_tunisie.gif']
 }
