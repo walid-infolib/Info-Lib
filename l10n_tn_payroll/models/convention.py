@@ -59,4 +59,7 @@ class EmployeeAgreement(models.Model):
     @api.depends("date_start", "level_id")
     def _compute_date_end(self):
         for line in self:
-            line.date_end = line.date_start + relativedelta(years=line.level_id.seniority)
+            if line.level_id:
+                line.date_end = line.date_start + relativedelta(years=line.level_id.seniority)
+            else:
+                line.date_end = False

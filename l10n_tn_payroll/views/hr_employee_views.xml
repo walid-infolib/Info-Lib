@@ -17,5 +17,11 @@
                 </page>
             </page>
         </field>
+
+        <field name="arch" type="xml">
+            <field name="marital" position="after">
+                 <field name="head_of_the_family" />
+            </field>
+        </field>
     </record>
 </odoo>

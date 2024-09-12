@@ -10,3 +10,6 @@ class HrPayrollStructureType(models.Model):
     default_work_entry_hours = fields.Float(
         string="Default number of hours per month",
     )
+    number_of_months_of_salary = fields.Integer(
+            string="Number of months of salary per year",
+        )

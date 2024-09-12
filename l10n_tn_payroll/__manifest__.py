@@ -6,17 +6,21 @@
     'author': "Info'Lib",
     'category': 'Human Resources/Payroll',
     'version': '17.0.0.0.0',
-    'depends': ['hr_payroll'],
+    'depends': ['hr_payroll', 'cnss_declaration'],
     'data': [
         'data/collective_agreement_data.xml',
+        'data/hr_payroll_data_tn.xml',
+        'data/hr_work_entry_data.xml',
         'security/ir.model.access.csv',
+        'views/report_payslip_templates.xml',
         'views/convention_views.xml',
         'views/hr_contract_views.xml',
         'views/hr_employee_views.xml',
         'views/hr_payroll_structure_type_views.xml',
+        'views/hr_salary_rule.xml',
     ],
-    'installable': False,
+    'installable': True,
     'license': 'OPL-1',
-    'price': 100,
-    'images': ['static/description/cover_540_270.png']
+    "price": 500,
+    'images': ['static/description/cover_540_270_paie_tunisie.gif']
 }

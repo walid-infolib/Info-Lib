@@ -7,6 +7,7 @@
             <field name="default_work_entry_type_id" position="after">
                 <field name="default_work_entry_days" invisible="wage_type != 'monthly'"/>
                 <field name="default_work_entry_hours" invisible="wage_type != 'monthly'"/>
+                <field name="number_of_months_of_salary" invisible="wage_type != 'monthly'"/>
             </field>
         </field>
     </record>

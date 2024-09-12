@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+    <!-- Salary Structure -->
+        <record id="structure_tn" model="hr.payroll.structure">
+            <field name="name">Tunisie paie</field>
+            <field name="type_id" ref="hr_contract.structure_type_employee"/>
+            <field name="unpaid_work_entry_type_ids" eval="[(4, ref('hr_work_entry_contract.work_entry_type_unpaid_leave'))]"/>
+            <field name="country_id" eval="False"/>
+        </record>
+        <record id="hr_contract.structure_type_employee" model="hr.payroll.structure.type">
+            <field name="default_struct_id" ref="structure_tn"/>
+        </record>
+    </data>
+
+    <data noupdate="0">
+        <record id="default_basic_salary_rule_tn" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.BASIC"/>
+            <field name="name">SALAIRE DE BASE</field>
+            <field name="sequence">1</field>
+            <field name="code">BASIC</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+number_of_days_of_presence = ('WORK100' in worked_days and worked_days['WORK100'].number_of_days) - ('LEAVE90' in worked_days and worked_days['LEAVE90'].number_of_days)
+result = (contract.wage /payslip.struct_id.type_id.default_work_entry_days)
+result_qty = number_of_days_of_presence
+            </field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+<!-- Salaire brut -->
+         <record id="hr_salary_rule_paid_leave" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">CONGE PAYE</field>
+            <field name="code">PaidLeave</field>
+            <field name="sequence" eval="1"/>
+            <field name="condition_select">python</field>
+             <field name="condition_python">result = 'LEAVE120' in worked_days or 'Death' in worked_days or 'Wedding' in worked_days</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+total_paid_time_off = ('LEAVE120' in worked_days and worked_days['LEAVE120'].amount) + ('Death' in worked_days and worked_days['Death'].amount)+('Wedding' in worked_days and worked_days['Wedding'].amount)
+number_of_days = ('LEAVE120' in worked_days and worked_days['LEAVE120'].number_of_days) + ('Death' in worked_days and worked_days['Death'].number_of_days) + ('Wedding' in worked_days and worked_days['Wedding'].number_of_days)
+result = total_paid_time_off
+result_qty = number_of_days
+            </field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+         <record id="hr_salary_rule_public_holiday" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">JOUR FERIE</field>
+            <field name="code">PublicHoliday</field>
+            <field name="sequence" eval="2"/>
+            <field name="condition_select">python</field>
+             <field name="condition_python">result = 'PublicHoliday' in worked_days</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+total_public_holiday = ('PublicHoliday' in worked_days and worked_days['PublicHoliday'].amount)
+number_of_days = ('PublicHoliday' in worked_days and worked_days['PublicHoliday'].number_of_days)
+result = total_public_holiday
+result_qty = number_of_days
+            </field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="hr_salary_rule_overtime_hours_25" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">HEURES SUPPLEMENTAIRES 25%</field>
+            <field name="code">OVERTIME25</field>
+            <field name="sequence" eval="3"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = 'OVERTIME' in worked_days</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+total_overtime_hours = ('OVERTIME' in worked_days and worked_days['OVERTIME'].number_of_hours)
+
+result = (contract.wage/ payslip.struct_id.type_id.default_work_entry_hours)* 1.25
+
+if total_overtime_hours <= 8:
+    result_qty = total_overtime_hours
+elif total_overtime_hours > 8:
+    result_qty = 8
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="hr_salary_rule_overtime_hours_50" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">HEURES SUPPLEMENTAIRES 50%</field>
+            <field name="code">OVERTIME50</field>
+            <field name="sequence" eval="4"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = 'OVERTIME' in worked_days</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+total_overtime_hours = ('OVERTIME' in worked_days and worked_days['OVERTIME'].number_of_hours)
+
+result = (contract.wage/ payslip.struct_id.type_id.default_work_entry_hours) * 1.5
+
+if total_overtime_hours > 8:
+    result_qty = (total_overtime_hours - 8)
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="hr_salary_rule_overtime_hours_100" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">HEURES SUPPLEMENTAIRES 100%</field>
+            <field name="code">OVERTIME100</field>
+            <field name="sequence" eval="4"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = 'OVERTIME_IN_PublicHoliday' in worked_days</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+total_overtime_days = ('OVERTIME_IN_PublicHoliday' in worked_days and worked_days['OVERTIME_IN_PublicHoliday'].number_of_hours)
+
+result = contract.wage/ payslip.struct_id.type_id.default_work_entry_hours
+result_qty = total_overtime_days
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="hr_salary_rule_attendance_allowance" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">PRIME DE PRESENCE</field>
+            <field name="code">AttendanceAllowance</field>
+            <field name="sequence" eval="5"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+number_of_days_of_presence = ('WORK100' in worked_days and worked_days['WORK100'].number_of_days) - ('LEAVE90' in worked_days and worked_days['LEAVE90'].number_of_days)
+result = (14.043 / payslip.struct_id.type_id.default_work_entry_days) * number_of_days_of_presence</field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="hr_salary_rule_conveyance_allowance" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">INDEMNITE DE TRANSPORT</field>
+            <field name="code">ConveyanceAllowance</field>
+            <field name="sequence" eval="6"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+number_of_days_of_presence = ('WORK100' in worked_days and worked_days['WORK100'].number_of_days) - ('LEAVE90' in worked_days and worked_days['LEAVE90'].number_of_days)
+result = (75.786 / payslip.struct_id.type_id.default_work_entry_days) * number_of_days_of_presence</field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="tn_gross_salary_rule" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.GROSS"/>
+            <field name="name">BRUT</field>
+            <field name="sequence">100 </field>
+            <field name="code">GROSS</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = categories['BASIC'] + categories['ALW']
+            </field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+ <!--        Deduction-->
+        <record id="default_cnss_contribution" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">COTISATION CNSS</field>
+            <field name="code">cnss_contribution</field>
+            <field name="amount_select">code</field>
+            <field name="sequence">100</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute">result = -GROSS * contract.contract_type_id.cnss_salary_rate/100</field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+        <record id="default_cnss_patronale" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">CNSS Patronale</field>
+            <field name="code">cnss_patronale</field>
+            <field name="amount_select">code</field>
+            <field name="sequence">101</field>
+            <field name="appears_on_payslip" eval="False"/>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute">result = -GROSS * contract.contract_type_id.employer_cnss_rate/100</field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+        <record id="default_taxable_gross" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">BRUT IMPOSABLE</field>
+            <field name="code">taxable_gross</field>
+            <field name="amount_select">code</field>
+            <field name="sequence">102</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute">result = GROSS + cnss_contribution</field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+        <!--        IRPP-->
+        <record id="default_gross_annual_contribution" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">BRUT IMPOSABLE ANNUEL</field>
+            <field name="code">GAC</field>
+            <field name="amount_select">code</field>
+            <field name="sequence">103</field>
+            <field name="appears_on_payslip" eval="False"/>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute"><![CDATA[
+payslip_ids = payslip.env['hr.payslip'].search([('employee_id','=', payslip.employee_id.id),('date_from','<',payslip.date_from), ('date_from','>=',payslip.date_from.strftime('%Y-01-01'))])
+wage_old =  0
+for line in payslip_ids:
+    wage_old += line.gross_wage
+rest = payslip.struct_id.type_id.number_of_months_of_salary - payslip.date_from.month
+if not rest:
+    rest = 1
+result = ceil(wage_old + (GROSS * rest))
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="default_gross_annual_contribution_1" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">BRUT IMPOSABLE ANNUEL 1, 2 ,3</field>
+            <field name="code">GAC1</field>
+            <field name="appears_on_payslip" eval="False"/>
+            <field name="amount_select">code</field>
+            <field name="sequence">104</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute"><![CDATA[
+gac1 = GAC*0.1
+if gac1 > 2000:
+    gac1 = 2000
+GAC = GAC - gac1
+gac2 = GAC
+if payslip.employee_id.marital=="married":
+    if payslip.employee_id.children <= 4:
+        children = payslip.employee_id.children
+    else:
+        children = 4
+    gac2 = gac2 - 300 - (100 * children)
+result = gac2
+
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="default_annual_tr1_irpp" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">TR1 IRPP</field>
+            <field name="code">TR1</field>
+            <field name="appears_on_payslip" eval="False"/>
+            <field name="amount_select">code</field>
+            <field name="sequence">105</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute"><![CDATA[
+result = 0
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="default_annual_tr2_irpp" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">TR2 IRPP</field>
+            <field name="code">TR2</field>
+            <field name="appears_on_payslip" eval="False"/>
+            <field name="amount_select">code</field>
+            <field name="sequence">106</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute"><![CDATA[
+annual_irpp = 0
+if 5000 < GAC1 <= 20000:
+    annual_irpp += (GAC1 - 5000) * 0.26
+elif GAC1 > 20000:
+    annual_irpp += 3900
+result = annual_irpp
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="default_annual_tr3_irpp" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">TR3 IRPP</field>
+            <field name="appears_on_payslip" eval="False"/>
+            <field name="code">TR3</field>
+            <field name="amount_select">code</field>
+            <field name="sequence">107</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute"><![CDATA[
+annual_irpp = 0
+
+if 20000 < GAC1 <= 30000:
+    annual_irpp = ((GAC1 - 20000) * 0.28)
+elif GAC1 > 30000:
+    annual_irpp = 2800
+result = annual_irpp
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="default_annual_tr4_irpp" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">TR4 IRPP</field>
+            <field name="code">TR4</field>
+            <field name="appears_on_payslip" eval="False"/>
+            <field name="amount_select">code</field>
+            <field name="sequence">108</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute"><![CDATA[
+annual_irpp = 0
+if 30000 < GAC1 <= 50000:
+    annual_irpp = (GAC1 - 30000)*0.32
+elif GAC1 > 50000:
+    annual_irpp = 6400
+result = annual_irpp
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+         <record id="default_annual_tr5_irpp" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">TR5 IRPP</field>
+            <field name="code">TR5</field>
+             <field name="appears_on_payslip" eval="False"/>
+            <field name="amount_select">code</field>
+            <field name="sequence">109</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute"><![CDATA[
+annual_irpp = 0
+
+if GAC1 > 50000:
+    annual_irpp += (GAC1 - 50000) * 0.35
+
+result = annual_irpp
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="default_annual_irpp" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">IRPP ANNUEL</field>
+            <field name="code">A_IRPP</field>
+            <field name="amount_select">code</field>
+            <field name="sequence">110</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute"><![CDATA[
+result = TR1 + TR2 + TR3 + TR4 + TR5
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+        <record id="default_irpp" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">IRPP</field>
+            <field name="code">IRPP</field>
+            <field name="amount_select">code</field>
+            <field name="sequence">111</field>
+            <field name="condition_select">none</field>
+            <field name="amount_python_compute"><![CDATA[
+payslip_ids = payslip.env['hr.payslip.line'].search([('employee_id','=', payslip.employee_id.id),
+                                                     ('date_from','<',payslip.date_from),
+                                                     ('date_from','>=',payslip.date_from.strftime('%Y-01-01'))])
+total = 0
+irpp_old =  0
+for line in payslip_ids:
+    if line.code == 'IRPP':
+        irpp_old += total
+rest_month = payslip.struct_id.type_id.number_of_months_of_salary - payslip.date_from.month
+if not rest_month:
+    rest_month = 1
+
+result = - (A_IRPP - irpp_old) / rest_month
+            ]]></field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+        <!--        NET Salary-->
+
+         <record id="tn_net_salary" model="hr.salary.rule">
+            <field name="category_id" ref="hr_payroll.NET"/>
+            <field name="name">SALAIRE NET</field>
+            <field name="sequence">200</field>
+            <field name="code">NET</field>
+            <field name="appears_on_employee_cost_dashboard">True</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result = taxable_gross + IRPP
+            </field>
+            <field name="struct_id" ref="l10n_tn_payroll.structure_tn"/>
+        </record>
+
+    </data>
+
+</odoo>

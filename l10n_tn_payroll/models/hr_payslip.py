@@ -14,7 +14,7 @@ class HrPayslip(models.Model):
             default_work_entry_days = self.struct_id.type_id.default_work_entry_days
             default_work_entry_hours = self.struct_id.type_id.default_work_entry_hours
             for worked in res:
-                work_entry_type_id =self.env['hr.work.entry.type'].browse(worked['work_entry_type_id'])
+                work_entry_type_id = self.env['hr.work.entry.type'].browse(worked['work_entry_type_id'])
                 if work_entry_type_id != self.struct_id.type_id.default_work_entry_type_id and work_entry_type_id.is_leave:
                     default_work_entry_days -= worked['number_of_days']
                     default_work_entry_hours -= worked['number_of_hours']
