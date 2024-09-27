@@ -8,6 +8,7 @@
                 <field name="exploit_code"/>
                 <field name="cnss_salary_rate"/>
                 <field name="employer_cnss_rate"/>
+                <field name="work_accident"/>
                 <field name="tfp"/>
                 <field name="foprolos"/>
                 <field name="taxable"/>
@@ -25,6 +26,7 @@
                     <field name="exploit_code"/>
                     <field name="cnss_salary_rate"/>
                     <field name="employer_cnss_rate"/>
+                    <field name="work_accident"/>
                     <field name="tfp"/>
                     <field name="foprolos"/>
                     <field name="taxable"/>

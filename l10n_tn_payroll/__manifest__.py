@@ -6,7 +6,7 @@
     'author': "Info'Lib",
     'category': 'Human Resources/Payroll',
     'version': '17.0.0.0.0',
-    'depends': ['hr_payroll', 'cnss_declaration'],
+    'depends': ['cnss_declaration'],
     'data': [
         'data/collective_agreement_data.xml',
         'data/hr_payroll_data_tn.xml',

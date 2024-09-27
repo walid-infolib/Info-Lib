@@ -7,6 +7,7 @@
             <field name="exploit_code">0000</field>
             <field name="cnss_salary_rate" eval="9.18"/>
             <field name="employer_cnss_rate" eval="16.57"/>
+            <field name="work_accident" eval="0.5"/>
             <field name="tfp" eval="2"/>
             <field name="foprolos" eval="1"/>
             <field name="taxable">True</field>
@@ -17,6 +18,7 @@
             <field name="exploit_code">0000</field>
             <field name="cnss_salary_rate" eval="9.18"/>
             <field name="employer_cnss_rate" eval="16.57"/>
+            <field name="work_accident" eval="0.5"/>
             <field name="tfp" eval="2"/>
             <field name="foprolos" eval="1"/>
             <field name="taxable">True</field>
@@ -27,6 +29,7 @@
             <field name="exploit_code">0000</field>
             <field name="cnss_salary_rate" eval="9.18"/>
             <field name="employer_cnss_rate" eval="16.57"/>
+            <field name="work_accident" eval="0.5"/>
             <field name="tfp" eval="2"/>
             <field name="foprolos" eval="1"/>
             <field name="taxable">True</field>
@@ -37,6 +40,7 @@
             <field name="exploit_code">0000</field>
             <field name="cnss_salary_rate" eval="0"/>
             <field name="employer_cnss_rate" eval="0"/>
+            <field name="work_accident" eval="0"/>
             <field name="tfp" eval="0"/>
             <field name="foprolos" eval="0"/>
             <field name="taxable">False</field>
