@@ -1,48 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data noupdate="1">
         <record id="contract_type_ordianry" model="hr.contract.type">
             <field name="name">Ordinary</field>
             <field name="sequence">1</field>
             <field name="exploit_code">0000</field>
-            <field name="cnss_salary_rate" eval="9.18"/>
-            <field name="employer_cnss_rate" eval="16.57"/>
-            <field name="work_accident" eval="0.5"/>
-            <field name="tfp" eval="2"/>
-            <field name="foprolos" eval="1"/>
+            <field name="cnss_salary_rate" eval="9.18" />
+            <field name="employer_cnss_rate" eval="16.57" />
+            <field name="work_accident" eval="0.5" />
+            <field name="tfp" eval="2" />
+            <field name="foprolos" eval="1" />
             <field name="taxable">True</field>
         </record>
         <record id="contract_type_karama" model="hr.contract.type">
             <field name="name">Karama</field>
             <field name="sequence">1</field>
             <field name="exploit_code">0000</field>
-            <field name="cnss_salary_rate" eval="9.18"/>
-            <field name="employer_cnss_rate" eval="16.57"/>
-            <field name="work_accident" eval="0.5"/>
-            <field name="tfp" eval="2"/>
-            <field name="foprolos" eval="1"/>
+            <field name="cnss_salary_rate" eval="9.18" />
+            <field name="employer_cnss_rate" eval="16.57" />
+            <field name="work_accident" eval="0.5" />
+            <field name="tfp" eval="2" />
+            <field name="foprolos" eval="1" />
             <field name="taxable">True</field>
         </record>
         <record id="contract_type_ex2" model="hr.contract.type">
             <field name="name">EX 2</field>
             <field name="sequence">1</field>
             <field name="exploit_code">0000</field>
-            <field name="cnss_salary_rate" eval="9.18"/>
-            <field name="employer_cnss_rate" eval="16.57"/>
-            <field name="work_accident" eval="0.5"/>
-            <field name="tfp" eval="2"/>
-            <field name="foprolos" eval="1"/>
+            <field name="cnss_salary_rate" eval="9.18" />
+            <field name="employer_cnss_rate" eval="16.57" />
+            <field name="work_accident" eval="0.5" />
+            <field name="tfp" eval="2" />
+            <field name="foprolos" eval="1" />
             <field name="taxable">True</field>
         </record>
         <record id="contract_type_sivp" model="hr.contract.type">
             <field name="name">SIVP</field>
             <field name="sequence">1</field>
             <field name="exploit_code">0000</field>
-            <field name="cnss_salary_rate" eval="0"/>
-            <field name="employer_cnss_rate" eval="0"/>
-            <field name="work_accident" eval="0"/>
-            <field name="tfp" eval="0"/>
-            <field name="foprolos" eval="0"/>
+            <field name="cnss_salary_rate" eval="0" />
+            <field name="employer_cnss_rate" eval="0" />
+            <field name="work_accident" eval="0" />
+            <field name="tfp" eval="0" />
+            <field name="foprolos" eval="0" />
             <field name="taxable">False</field>
         </record>
     </data>

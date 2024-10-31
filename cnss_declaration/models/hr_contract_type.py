@@ -1,8 +1,8 @@
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class ContractType(models.Model):
-    _inherit = 'hr.contract.type'
+    _inherit = "hr.contract.type"
 
     exploit_code = fields.Char(string="Exploit code", size=4)
     cnss_salary_rate = fields.Float(string="CNSS salary rate")
@@ -11,4 +11,3 @@ class ContractType(models.Model):
     tfp = fields.Float(string="TFP", help="The Professional Training Tax")
     foprolos = fields.Float(string="FOPROLOS", help="Social Housing Promotion Fund")
     taxable = fields.Boolean(string="Taxable", help="Taxable", default=True)
-

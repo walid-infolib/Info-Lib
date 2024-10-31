@@ -5,11 +5,11 @@
         <field name="model">withholding.tax</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="amount"/>
-                <field name="designation"/>
-                <field name="account_customer_id"/>
-                <field name="account_supplier_id"/>
+                <field name="name" />
+                <field name="amount" />
+                <field name="designation" />
+                <field name="account_customer_id" />
+                <field name="account_supplier_id" />
             </tree>
         </field>
     </record>
@@ -22,13 +22,13 @@
                 <sheet>
                     <group class="d-flex flex-column">
                         <group>
-                            <field name="name" required="1"/>
-                            <field name="amount" required="1"/>
-                            <field name="designation" required="1"/>
+                            <field name="name" required="1" />
+                            <field name="amount" required="1" />
+                            <field name="designation" required="1" />
                         </group>
                         <group>
-                            <field name="account_customer_id" required="1"/>
-                            <field name="account_supplier_id" required="1"/>
+                            <field name="account_customer_id" required="1" />
+                            <field name="account_supplier_id" required="1" />
                         </group>
                     </group>
                 </sheet>
@@ -40,8 +40,12 @@
         <field name="res_model">withholding.tax</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem id="configuration_withholding_tax_menu" name="Withholding tax" parent="account.account_account_menu"
-              action="l10n_tn_withholding_tax_menu_action"/>
+    <menuitem
+    id="configuration_withholding_tax_menu"
+    name="Withholding tax"
+    parent="account.account_account_menu"
+    action="l10n_tn_withholding_tax_menu_action"
+  />
 
 
 </odoo>

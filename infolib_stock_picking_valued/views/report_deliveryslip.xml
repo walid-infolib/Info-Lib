@@ -1,7 +1,10 @@
 <odoo>
-    <template id="report_delivery_document_inherit_stock_picking_valued" inherit_id="stock.report_delivery_document">
+    <template
+    id="report_delivery_document_inherit_stock_picking_valued"
+    inherit_id="stock.report_delivery_document"
+  >
         <xpath expr="//th[@name='th_sm_quantity']" position="after">
-            <t t-set="display_discount" t-value="any(l.discount for l in o.move_ids)"/>
+            <t t-set="display_discount" t-value="any(l.discount for l in o.move_ids)" />
             <th name="th_sm_price_unit" class="text-end">
                 <strong>Price Unit</strong>
             </th>
@@ -17,32 +20,36 @@
         </xpath>
         <xpath expr="//table[@name='stock_move_table']/tbody/tr/td[3]" position="after">
             <td class="text-end">
-                <span t-field="move.price_unit"/>
+                <span t-field="move.price_unit" />
             </td>
             <td t-if="display_discount" class="text-end">
-                <span t-field="move.discount"/>
+                <span t-field="move.discount" />
             </td>
             <td>
-                <span t-out="', '.join(map(lambda x: (x.description or x.name), move.tax_id))"/>
+                <span
+          t-out="', '.join(map(lambda x: (x.description or x.name), move.tax_id))"
+        />
             </td>
             <td class="text-end">
-                <span t-field="move.price_subtotal"/>
+                <span t-field="move.price_subtotal" />
             </td>
         </xpath>
         <xpath expr="//table[@name='stock_move_line_table']" position="after">
             <div class="clearfix" name="so_total_summary">
                 <div id="total" class="row" name="total">
-                    <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto">
+                    <div
+            t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto"
+          >
                         <table class="table table-sm table-borderless">
-                            <t t-set="tax_totals" t-value="o.tax_totals"/>
-                            <t t-call="sale.document_tax_totals"/>
+                            <t t-set="tax_totals" t-value="o.tax_totals" />
+                            <t t-call="sale.document_tax_totals" />
                         </table>
                     </div>
                 </div>
             </div>
         </xpath>
         <xpath expr="//th[@name='th_sml_quantity']" position="after">
-            <t t-set="display_discount" t-value="any(l.discount for l in o.move_ids)"/>
+            <t t-set="display_discount" t-value="any(l.discount for l in o.move_ids)" />
             <th name="th_sm_price_unit" class="text-end">
                 <strong>Price Unit</strong>
             </th>
@@ -58,20 +65,24 @@
         </xpath>
     </template>
 
-    <template id="stock_report_delivery_aggregated_move_lines_inherit_stock_picking_valued"
-              inherit_id="stock.stock_report_delivery_aggregated_move_lines">
+    <template
+    id="stock_report_delivery_aggregated_move_lines_inherit_stock_picking_valued"
+    inherit_id="stock.stock_report_delivery_aggregated_move_lines"
+  >
         <xpath expr="//tr/td[3]" position="after">
             <td class="text-end">
-                <span t-esc="aggregated_lines[line]['price_unit']"/>
+                <span t-esc="aggregated_lines[line]['price_unit']" />
             </td>
             <td class="text-end">
-                <span t-esc="aggregated_lines[line]['discount']"/>
+                <span t-esc="aggregated_lines[line]['discount']" />
             </td>
             <td>
-                <span t-out="', '.join(map(lambda x: (x.description or x.name), aggregated_lines[line]['tax_id']))"/>
+                <span
+          t-out="', '.join(map(lambda x: (x.description or x.name), aggregated_lines[line]['tax_id']))"
+        />
             </td>
             <td class="text-end">
-                <span t-esc="aggregated_lines[line]['price_subtotal']"/>
+                <span t-esc="aggregated_lines[line]['price_subtotal']" />
             </td>
         </xpath>
     </template>

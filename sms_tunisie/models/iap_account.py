@@ -1,4 +1,4 @@
-from odoo import fields, models,api
+from odoo import fields, models
 
 
 class IapAccount(models.Model):
@@ -6,14 +6,14 @@ class IapAccount(models.Model):
 
     provider = fields.Selection(
         selection_add=[("sms_app_tunis", "Tunisie SMS")],
-        ondelete={
-            "sms_app_tunis": "cascade"
-        },
+        ondelete={"sms_app_tunis": "cascade"},
     )
 
     sms_app_tunis_sender = fields.Char(string="Sender Name")
     sms_app_tunis_key = fields.Char(string="key")
-    sms_app_tunis_endpoint = fields.Char('Endpoint', default='https://www.tunisiesms.tn/client/Api/Api.aspx')
+    sms_app_tunis_endpoint = fields.Char(
+        "Endpoint", default="https://www.tunisiesms.tn/client/Api/Api.aspx"
+    )
 
     def _get_service_from_provider(self):
         if self.provider == "sms_app_tunis":

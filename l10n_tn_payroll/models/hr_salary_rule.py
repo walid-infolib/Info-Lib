@@ -1,15 +1,20 @@
-from odoo import models, fields
+from odoo import fields, models
 
 
 class HrSalaryRule(models.Model):
-    _inherit = 'hr.salary.rule'
+    _inherit = "hr.salary.rule"
 
-    appears_on_payslip_quantity = fields.Boolean(string='Appears on Payslip Quantity', default=False,
-        help="Used to display the Quantity on payslip Report.")
+    appears_on_payslip_quantity = fields.Boolean(
+        string="Appears on Payslip Quantity",
+        default=False,
+        help="Used to display the Quantity on payslip Report.",
+    )
 
 
 class HrPayslipLine(models.Model):
-    _inherit = 'hr.payslip.line'
+    _inherit = "hr.payslip.line"
 
-    appears_on_payslip_quantity = fields.Boolean(string='Appears on Payslip Quantity', related="salary_rule_id.appears_on_payslip_quantity")
-
+    appears_on_payslip_quantity = fields.Boolean(
+        string="Appears on Payslip Quantity",
+        related="salary_rule_id.appears_on_payslip_quantity",
+    )

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_collective_agreement_form" model="ir.ui.view">
         <field name="name">collective.agreement.form</field>
@@ -7,23 +7,23 @@
             <form string="Collective Agreement">
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="date_effective"/>
-                        <field name="description"/>
+                        <field name="name" />
+                        <field name="date_effective" />
+                        <field name="description" />
                     </group>
                     <field name="category_ids" nolabel="1">
                         <tree string="Categories">
-                            <field name="name"/>
+                            <field name="name" />
                         </tree>
                         <form string="Category">
                         <group>
-                            <field name="name"/>
+                            <field name="name" />
                         </group>
                         <field name="level_ids" nolabel="1">
                             <tree string="Levels" editable="bottom">
-                                <field name="name"/>
-                                <field name="salary"/>
-                                <field name="seniority"/>
+                                <field name="name" />
+                                <field name="salary" />
+                                <field name="seniority" />
                             </tree>
                         </field>
                     </form>
@@ -38,8 +38,8 @@
         <field name="model">collective.agreement</field>
         <field name="arch" type="xml">
             <tree string="Collective Agreements">
-                <field name="name"/>
-                <field name="date_effective"/>
+                <field name="name" />
+                <field name="date_effective" />
             </tree>
         </field>
     </record>
@@ -50,12 +50,13 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_collective_agreement"
-              name="Agreements"
-              parent="hr_payroll.menu_hr_salary_configuration"
-              action="action_collective_agreement"
-              sequence="11"
-    />
+    <menuitem
+    id="menu_collective_agreement"
+    name="Agreements"
+    parent="hr_payroll.menu_hr_salary_configuration"
+    action="action_collective_agreement"
+    sequence="11"
+  />
 
     <!--          Convention Details          -->
 
@@ -64,11 +65,11 @@
         <field name="model">collective.level</field>
         <field name="arch" type="xml">
             <tree string="Collective Agreements Details" editable="bottom">
-                <field name="agreement_id"/>
-                <field name="category_id"/>
-                <field name="name"/>
-                <field name="salary"/>
-                <field name="seniority"/>
+                <field name="agreement_id" />
+                <field name="category_id" />
+                <field name="name" />
+                <field name="salary" />
+                <field name="seniority" />
             </tree>
         </field>
     </record>
@@ -79,12 +80,13 @@
         <field name="view_mode">tree</field>
     </record>
 
-    <menuitem id="menu_collective_level"
-              name="Agreements Details"
-              parent="hr_payroll.menu_hr_salary_configuration"
-              action="action_collective_level"
-              sequence="12"
-    />
+    <menuitem
+    id="menu_collective_level"
+    name="Agreements Details"
+    parent="hr_payroll.menu_hr_salary_configuration"
+    action="action_collective_level"
+    sequence="12"
+  />
 
     <!--          Collective agreement history          -->
 
@@ -93,10 +95,10 @@
         <field name="model">hr.employee.agreement</field>
         <field name="arch" type="xml">
             <tree string="Collective agreement history" editable="top">
-                <field name="employee_id"/>
-                <field name="level_id"/>
-                <field name="date_start"/>
-                <field name="date_end"/>
+                <field name="employee_id" />
+                <field name="level_id" />
+                <field name="date_start" />
+                <field name="date_end" />
             </tree>
         </field>
     </record>
@@ -107,11 +109,12 @@
         <field name="view_mode">tree</field>
     </record>
 
-    <menuitem id="menu_hr_employee_agreement"
-              name="Collective Agreement History"
-              parent="hr_payroll.menu_hr_payroll_employees_root"
-              action="action_hr_employee_agreement"
-              sequence="31"
-    />
+    <menuitem
+    id="menu_hr_employee_agreement"
+    name="Collective Agreement History"
+    parent="hr_payroll.menu_hr_payroll_employees_root"
+    action="action_hr_employee_agreement"
+    sequence="31"
+  />
 
 </odoo>

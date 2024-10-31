@@ -1,10 +1,11 @@
 from validate_email import validate_email
-from odoo import models, _, api
+
+from odoo import _, api, models
 from odoo.exceptions import UserError
 
 
 class ResPartner(models.Model):
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     @api.constrains("email")
     def check_email(self):

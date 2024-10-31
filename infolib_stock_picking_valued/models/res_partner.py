@@ -1,7 +1,9 @@
-from odoo import models, fields
+from odoo import fields, models
 
 
 class ResPartner(models.Model):
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
-    delivery_report_valued = fields.Boolean(string="Value the delivery note", default=False)
+    delivery_report_valued = fields.Boolean(
+        string="Value the delivery note", default=False
+    )

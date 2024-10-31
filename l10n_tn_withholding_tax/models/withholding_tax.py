@@ -1,4 +1,4 @@
-from odoo import api, models, fields
+from odoo import fields, models
 
 
 class WithholdingTax(models.Model):

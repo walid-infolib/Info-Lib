@@ -1,8 +1,8 @@
-from odoo import models, fields
+from odoo import fields, models
 
 
 class HrPayrollStructureType(models.Model):
-    _inherit = 'hr.payroll.structure.type'
+    _inherit = "hr.payroll.structure.type"
 
     default_work_entry_days = fields.Float(
         string="Default number of days per month",
@@ -11,5 +11,5 @@ class HrPayrollStructureType(models.Model):
         string="Default number of hours per month",
     )
     number_of_months_of_salary = fields.Integer(
-            string="Number of months of salary per year",
-        )
+        string="Number of months of salary per year",
+    )

@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
     <record id="action_report_withholding_account" model="ir.actions.report">
         <field name="name">Withholding tax</field>
         <field name="model">account.payment</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">l10n_tn_withholding_tax.report_withholding_tax_structure</field>
-        <field name="report_file">l10n_tn_withholding_tax.report_withholding_tax_structure</field>
+        <field
+      name="report_name"
+    >l10n_tn_withholding_tax.report_withholding_tax_structure</field>
+        <field
+      name="report_file"
+    >l10n_tn_withholding_tax.report_withholding_tax_structure</field>
         <field name="print_report_name">('Withholding Tax - %s' % (object.name))</field>
-        <field name="binding_model_id" ref="account.model_account_payment"/>
+        <field name="binding_model_id" ref="account.model_account_payment" />
         <field name="binding_type">report</field>
     </record>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
 
@@ -7,20 +7,28 @@
             <t t-call="web.html_container">
                 <t t-call="web.basic_layout">
                     <t t-foreach="docs" t-as="data">
-                        <div style="border: 1px solid black; margin-right: 3%; margin-left: 3%;">
+                        <div
+              style="border: 1px solid black; margin-right: 3%; margin-left: 3%;"
+            >
                             <!-- Header Section -->
                             <div style="margin-right: 3%; margin-left: 3%;">
                                 <div>
-                                    <div class="header-text" style="text-align: center;">
-                                        <h2>CERTIFICATE OF TAX WITHHOLDING ON INCOME OF INDIVIDUALS OR TAX
+                                    <div
+                    class="header-text"
+                    style="text-align: center;"
+                  >
+                                        <h2
+                    >CERTIFICATE OF TAX WITHHOLDING ON INCOME OF INDIVIDUALS OR TAX
                                             ON COMPANIES
                                         </h2>
                                         <p>WITHHOLDING MADE ON:
-                                            <span t-out="datetime.datetime.now().strftime('%d/%m/%Y')"/>
+                                            <span
+                        t-out="datetime.datetime.now().strftime('%d/%m/%Y')"
+                      />
                                         </p>
                                     </div>
                                 </div>
-                                <hr/>
+                                <hr />
                             </div>
 
                             <!-- Body Section -->
@@ -28,113 +36,175 @@
                                 <div class="section">
                                     <h3>A - PAYING AGENCY</h3>
                                     <div>
-                                        <table class="payeur-table"
-                                               style="float: right; border-collapse: collapse; margin-bottom: 3%;">
+                                        <table
+                      class="payeur-table"
+                      style="float: right; border-collapse: collapse; margin-bottom: 3%;"
+                    >
                                             <tr>
-                                                <td style="border: 1px solid black;">TAX REGISTRATION NUMBER</td>
-                                                <td style="border: 1px solid black;">VAT CODE</td>
-                                                <td style="border: 1px solid black;">CATEG. CODE</td>
+                                                <td
+                          style="border: 1px solid black;"
+                        >TAX REGISTRATION NUMBER</td>
+                                                <td
+                          style="border: 1px solid black;"
+                        >VAT CODE</td>
+                                                <td
+                          style="border: 1px solid black;"
+                        >CATEG. CODE</td>
                                                 <td style="border: 1px solid black;">
                                                     SECONDARY ESTABLI.
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid black; text-align:center;"
-                                                    t-esc="data['paying_agency_vat'].split('/')[0]"/>
-                                                <td style="border: 1px solid black; text-align:center;"
-                                                    t-esc="data['paying_agency_vat'].split('/')[1]"/>
-                                                <td style="border: 1px solid black; text-align:center;"
-                                                    t-esc="data['paying_agency_vat'].split('/')[2]"/>
-                                                <td style="border: 1px solid black; text-align:center;"
-                                                    t-esc="data['paying_agency_vat'].split('/')[3]"/>
+                                                <td
+                          style="border: 1px solid black; text-align:center;"
+                          t-esc="data['paying_agency_vat'].split('/')[0]"
+                        />
+                                                <td
+                          style="border: 1px solid black; text-align:center;"
+                          t-esc="data['paying_agency_vat'].split('/')[1]"
+                        />
+                                                <td
+                          style="border: 1px solid black; text-align:center;"
+                          t-esc="data['paying_agency_vat'].split('/')[2]"
+                        />
+                                                <td
+                          style="border: 1px solid black; text-align:center;"
+                          t-esc="data['paying_agency_vat'].split('/')[3]"
+                        />
                                             </tr>
                                         </table>
                                     </div>
                                     <div style="clear: both;">
                                         <p>NAME PAYING AGENCY:
-                                            <span t-out="data['paying_agency_name']"/>
+                                            <span t-out="data['paying_agency_name']" />
                                         </p>
                                         <p>ADDRESS:
-                                            <span t-out="data['paying_agency_address']"/>
+                                            <span
+                        t-out="data['paying_agency_address']"
+                      />
                                         </p>
                                     </div>
-                                    <table class="wide-table"
-                                           style="width: 106%; border-collapse: collapse; margin-left: -3%; margin-bottom: 3%;">
+                                    <table
+                    class="wide-table"
+                    style="width: 106%; border-collapse: collapse; margin-left: -3%; margin-bottom: 3%;"
+                  >
                                         <tr style="border: 1px solid black;">
-                                            <td style="border: 1px solid black; text-align:center;">
+                                            <td
+                        style="border: 1px solid black; text-align:center;"
+                      >
                                                 <h3>B - WITHHOLDING APPLIED ON :</h3>
                                             </td>
-                                            <td style="border: 1px solid black; text-align:center;">GROSS</td>
-                                            <td style="border: 1px solid black; text-align:center;">WITHHOLDING</td>
-                                            <td style="border: 1px solid black; text-align:center;">NET</td>
+                                            <td
+                        style="border: 1px solid black; text-align:center;"
+                      >GROSS</td>
+                                            <td
+                        style="border: 1px solid black; text-align:center;"
+                      >WITHHOLDING</td>
+                                            <td
+                        style="border: 1px solid black; text-align:center;"
+                      >NET</td>
                                         </tr>
-                                        <t t-foreach="data['withholding_data']" t-as="d">
+                                        <t
+                      t-foreach="data['withholding_data']"
+                      t-as="d"
+                    >
                                             <tr style="border: 1px solid black;">
-                                                <td style="border: 1px solid black; padding-left: 1%;" t-out="d['designation']"/>
-                                                <td style="border: 1px solid black; text-align:right; padding-right: 1%;"
-                                                    t-esc="d['subtotal']"
-                                                    t-options="{'widget': 'monetary', 'display_currency': data['currency_id']}"
-                                                />
-                                                <td style="border: 1px solid black; text-align:right; padding-right: 1%;"
-                                                    t-esc="d['amount']"
-                                                    t-options="{'widget': 'monetary', 'display_currency': data['currency_id']}"
-                                                />
-                                                <td style="border: 1px solid black; text-align:right; padding-right: 1%;"
-                                                    t-esc="d['total']"
-                                                    t-options="{'widget': 'monetary', 'display_currency': data['currency_id']}"
-                                                />
+                                                <td
+                          style="border: 1px solid black; padding-left: 1%;"
+                          t-out="d['designation']"
+                        />
+                                                <td
+                          style="border: 1px solid black; text-align:right; padding-right: 1%;"
+                          t-esc="d['subtotal']"
+                          t-options="{'widget': 'monetary', 'display_currency': data['currency_id']}"
+                        />
+                                                <td
+                          style="border: 1px solid black; text-align:right; padding-right: 1%;"
+                          t-esc="d['amount']"
+                          t-options="{'widget': 'monetary', 'display_currency': data['currency_id']}"
+                        />
+                                                <td
+                          style="border: 1px solid black; text-align:right; padding-right: 1%;"
+                          t-esc="d['total']"
+                          t-options="{'widget': 'monetary', 'display_currency': data['currency_id']}"
+                        />
                                             </tr>
                                         </t>
                                         <tr>
                                             <td style="text-align:center;">
                                                 <strong>Grand Total</strong>
                                             </td>
-                                            <td style="border: 1px solid black;"/>
-                                            <td style="border: 1px solid black;"/>
-                                            <td style="border: 1px solid black; text-align:right; padding-right: 1%;">
+                                            <td style="border: 1px solid black;" />
+                                            <td style="border: 1px solid black;" />
+                                            <td
+                        style="border: 1px solid black; text-align:right; padding-right: 1%;"
+                      >
                                                 <strong>
-                                                    <t t-esc="data['total_price']"
-                                                    t-options="{'widget': 'monetary', 'display_currency': data['currency_id']}"/>
+                                                    <t
+                            t-esc="data['total_price']"
+                            t-options="{'widget': 'monetary', 'display_currency': data['currency_id']}"
+                          />
                                                 </strong>
                                             </td>
                                         </tr>
                                         <!-- Include other rows here -->
                                     </table>
                                     <div>
-                                        <div style="float: left; margin-bottom: 2%; width: 30%;">
+                                        <div
+                      style="float: left; margin-bottom: 2%; width: 30%;"
+                    >
                                             <h3>C- BENEFICIARY:</h3>
-                                            <p style="border: 1px solid black; padding-left: 1%;"
-                                               t-out="data['recipient_name']"/>
+                                            <p
+                        style="border: 1px solid black; padding-left: 1%;"
+                        t-out="data['recipient_name']"
+                      />
                                         </div>
-                                        <div style="float: right; margin-bottom: 2%; width: 30%;">
+                                        <div
+                      style="float: right; margin-bottom: 2%; width: 30%;"
+                    >
                                             <h3>MF:</h3>
-                                            <p style="border: 1px solid black; padding-left: 1%;"
-                                               t-esc="' '.join(['MF',data['recipient_vat']])">MF 1560862
+                                            <p
+                        style="border: 1px solid black; padding-left: 1%;"
+                        t-esc="' '.join(['MF',data['recipient_vat']])"
+                      >MF 1560862
                                             </p>
                                         </div>
                                         <div style="clear: both; margin-top: 1%;">
-                                            <p style="margin-bottom: 2%;">FIRST NAME, LAST NAME, OR COMPANY NAME:
-                                                <span t-out="data['recipient_name']"/>
+                                            <p
+                        style="margin-bottom: 2%;"
+                      >FIRST NAME, LAST NAME, OR COMPANY NAME:
+                                                <span t-out="data['recipient_name']" />
                                             </p>
-                                            <p style="margin-bottom: 2%;">BUSINESS ADDRESS:
-                                                <span t-out="data['recipient_address']"/>
+                                            <p
+                        style="margin-bottom: 2%;"
+                      >BUSINESS ADDRESS:
+                                                <span
+                          t-out="data['recipient_address']"
+                        />
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <hr/>
+                                <hr />
                             </div>
 
                             <!-- Footer Section -->
-                            <div style="margin-right: 3%; margin-left: 3%; margin-bottom: 10%;">
-                                <p>UNDERSIGNED, CERTIFY THAT THE INFORMATION APPEARING ON THIS CERTIFICATE IS
+                            <div
+                style="margin-right: 3%; margin-left: 3%; margin-bottom: 10%;"
+              >
+                                <p
+                >UNDERSIGNED, CERTIFY THAT THE INFORMATION APPEARING ON THIS CERTIFICATE IS
                                     ACCURATE AND SUBJECT ME TO THE SANCTIONS PROVIDED FOR BY LAW FOR ANY INACCURACY.
                                 </p>
                                 <p style="text-align: center;">
                                     <strong>Tunis the :</strong>
-                                    <span t-out="datetime.datetime.now().strftime('%d/%m/%Y')"/>
+                                    <span
+                    t-out="datetime.datetime.now().strftime('%d/%m/%Y')"
+                  />
                                 </p>
-                                <p style="text-align: center;">Stamp and signature of the payer</p>
+                                <p
+                  style="text-align: center;"
+                >Stamp and signature of the payer</p>
                             </div>
                         </div>
                     </t>

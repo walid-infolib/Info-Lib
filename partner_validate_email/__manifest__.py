@@ -1,21 +1,21 @@
 {
     "name": "Validate Email",
-    'version': '17.0.0.0.0',
+    "version": "17.0.0.0.0",
     "author": "Info'Lib",
     "website": "https://www.infolib.tn/",
-    'category': 'Localization',
-    'description': """
+    "category": "Localization",
+    "description": """
 Check if an email is valid, properly formatted and really exists
 ============================================
     """,
-    'depends': ['base'],
+    "depends": ["base"],
     "external_dependencies": {"python": ["validate_email", "py3DNS"]},
     "data": [
         "data/ir_action_data.xml",
     ],
-    'installable': True,
+    "installable": True,
     "license": "LGPL-3",
     "images": [
         "images/infolib_tn.jpg",
-        ],
+    ],
 }
