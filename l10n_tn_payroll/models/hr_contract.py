@@ -10,6 +10,11 @@ class HrContract(models.Model):
         compute="_compute_agreement_id",
         inverse="_inverse_agreement_id",
     )
+    payment_type = fields.Selection(
+        [("cash", "Cash"), ("bank_transfer", "Bank transfer")],
+        string="Payment Type",
+        help="Payment Type",
+    )
 
     @api.depends("employee_id")
     def _compute_agreement_id(self):

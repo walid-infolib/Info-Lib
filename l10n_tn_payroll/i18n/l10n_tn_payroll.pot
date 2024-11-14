@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-04 16:22+0000\n"
-"PO-Revision-Date: 2024-09-04 16:22+0000\n"
+"POT-Creation-Date: 2024-11-06 09:30+0000\n"
+"PO-Revision-Date: 2024-11-06 09:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,22 +17,59 @@ msgstr ""
 
 #. module: l10n_tn_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "<strong>Catégorie</strong>"
-msgstr ""
+msgid "<strong>CAT.</strong>"
+msgstr "<strong>CAT.</strong>"
 
 #. module: l10n_tn_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "<strong>Chef de famille</strong>"
-msgstr ""
+msgid "<strong>ECH.</strong>"
+msgstr "<strong>ECH.</strong>"
 
 #. module: l10n_tn_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "<strong>N° C.N.S.S</strong>"
-msgstr ""
+msgid "<strong>MAT</strong>"
+msgstr "<strong>MAT</strong>"
 
 #. module: l10n_tn_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "<strong>RIB/ RIP</strong>"
+msgid "<strong>NOM et PRENOM</strong>"
+msgstr "<strong>NOM et PRENOM</strong>"
+
+#. module: l10n_tn_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
+msgid "<strong>N° CNSS</strong>"
+msgstr "<strong>N° CNSS</strong>"
+
+#. module: l10n_tn_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
+msgid "<strong>PAIEMENT</strong>"
+msgstr "<strong>PAIEMENT</strong>"
+
+#. module: l10n_tn_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
+msgid "<strong>QUALIFICATION</strong>"
+msgstr "<strong>QUALIFICATION</strong>"
+
+#. module: l10n_tn_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
+msgid "<strong>Salaire de base</strong>"
+msgstr "<strong>Salaire de base</strong>"
+
+#. module: l10n_tn_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
+msgid "<strong>Sit.Fami.</strong>"
+msgstr "<strong>Sit.Fami.</strong>"
+
+#. module: l10n_tn_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
+msgid "<strong>Situation administrative</strong>"
+msgstr "<strong>Situation administrative</strong>"
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields,help:l10n_tn_payroll.field_hr_employee__student
+msgid ""
+"A child pursuing higher education without a grant and under the age of 25, "
+"within the limits of the first four children"
 msgstr ""
 
 #. module: l10n_tn_payroll
@@ -41,64 +78,98 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_contract__agreement_id
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__level_id
 msgid "Agreement"
-msgstr ""
+msgstr "Accord"
 
 #. module: l10n_tn_payroll
 #: model:ir.ui.menu,name:l10n_tn_payroll.menu_collective_agreement
 msgid "Agreements"
-msgstr ""
+msgstr "Accords"
 
 #. module: l10n_tn_payroll
 #: model:ir.ui.menu,name:l10n_tn_payroll.menu_collective_level
 msgid "Agreements Details"
-msgstr ""
+msgstr "Détails des accords"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_payslip_line__appears_on_payslip_quantity
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_salary_rule__appears_on_payslip_quantity
 msgid "Appears on Payslip Quantity"
-msgstr ""
+msgstr "Apparaît sur la quantité du bulletin de paie"
+
+#. module: l10n_tn_payroll
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_avance
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_avance_cumulatif
+msgid "Avance"
+msgstr "Avance"
+
+#. module: l10n_tn_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
+msgid "BASE"
+msgstr "BASE"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.tn_gross_salary_rule
+#: model:hr.salary.rule,name:l10n_tn_payroll.tn_gross_salary_rule_cumulatif
 msgid "BRUT"
-msgstr ""
+msgstr "BRUT"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_taxable_gross
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_taxable_gross_cumulatif
 msgid "BRUT IMPOSABLE"
-msgstr ""
+msgstr "BRUT IMPOSABLE"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_gross_annual_contribution
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_gross_annual_contribution_cumulatif
 msgid "BRUT IMPOSABLE ANNUEL"
-msgstr ""
+msgstr "BRUT IMPOSABLE ANNUEL"
 
 #. module: l10n_tn_payroll
-#: model:hr.salary.rule,name:l10n_tn_payroll.default_gross_annual_contribution_1
-msgid "BRUT IMPOSABLE ANNUEL 1, 2 ,3"
-msgstr ""
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_gac1
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_gac1_cumulatif
+msgid "BRUT IMPOSABLE ANNUEL FAMILIALE"
+msgstr "BRUT IMPOSABLE ANNUEL FAMILIALE"
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields.selection,name:l10n_tn_payroll.selection__hr_contract__payment_type__bank_transfer
+msgid "Bank transfer"
+msgstr "Virement bancaire"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_cnss_patronale
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_cnss_patronale_cumulatif
 msgid "CNSS Patronale"
-msgstr ""
+msgstr "CNSS Patronale"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_paid_leave
+#: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_paid_leave_cumulatif
 msgid "CONGE PAYE"
-msgstr ""
+msgstr "CONGE PAYE"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_cnss_contribution
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_cnss_contribution_cumulatif
 msgid "COTISATION CNSS"
-msgstr ""
+msgstr "COTISATION CNSS"
+
+#. module: l10n_tn_payroll
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_css_cumulatif
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_cssp
+msgid "CSS"
+msgstr "CSS"
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields.selection,name:l10n_tn_payroll.selection__hr_contract__payment_type__cash
+msgid "Cash"
+msgstr "Espèces"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__category_ids
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.view_collective_agreement_form
 msgid "Categories"
-msgstr ""
+msgstr "Catégories"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_collective_category
@@ -106,42 +177,48 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__category_id
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.view_collective_agreement_form
 msgid "Category"
-msgstr ""
+msgstr "Catégorie"
+
+#. module: l10n_tn_payroll
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_head_of_the_family
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_head_of_the_family_cumulatif
+msgid "Chef de famille"
+msgstr "Chef de famille"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_collective_agreement
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.view_collective_agreement_form
 msgid "Collective Agreement"
-msgstr ""
+msgstr "Convention Collective"
 
 #. module: l10n_tn_payroll
 #: model:ir.actions.act_window,name:l10n_tn_payroll.action_hr_employee_agreement
 #: model:ir.ui.menu,name:l10n_tn_payroll.menu_hr_employee_agreement
 msgid "Collective Agreement History"
-msgstr ""
+msgstr "Historique de la convention collective"
 
 #. module: l10n_tn_payroll
 #: model:ir.actions.act_window,name:l10n_tn_payroll.action_collective_agreement
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.view_collective_agreement_tree
 msgid "Collective Agreements"
-msgstr ""
+msgstr "Conventions Collectives"
 
 #. module: l10n_tn_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.view_collective_level_tree
 msgid "Collective Agreements Details"
-msgstr ""
+msgstr "Détails des conventions collectives"
 
 #. module: l10n_tn_payroll
 #: model:ir.actions.act_window,name:l10n_tn_payroll.action_collective_level
 msgid "Collective Levels"
-msgstr ""
+msgstr "Niveaux collectifs"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_hr_employee_agreement
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee__agreement_ids
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.view_hr_employee_agreement_tree
 msgid "Collective agreement history"
-msgstr ""
+msgstr "Historique des conventions collectives"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__create_uid
@@ -149,7 +226,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__create_uid
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Créé par"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__create_date
@@ -157,32 +234,43 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__create_date
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
+
+#. module: l10n_tn_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
+msgid "DESIGNATION"
+msgstr "DESIGNATION"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__date_end
 msgid "Date End"
-msgstr ""
+msgstr "Date de fin"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__date_start
 msgid "Date Start"
-msgstr ""
+msgstr "Date de début"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_payroll_structure_type__default_work_entry_days
 msgid "Default number of days per month"
-msgstr ""
+msgstr "Nombre de jours par mois par défaut"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_payroll_structure_type__default_work_entry_hours
 msgid "Default number of hours per month"
-msgstr ""
+msgstr "Nombre d'heures par mois par défaut"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__description
 msgid "Description"
-msgstr ""
+msgstr "Description"
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee__disabled_child
+#: model:ir.model.fields,help:l10n_tn_payroll.field_hr_employee__disabled_child
+msgid "Disabled Child"
+msgstr "Enfant handicapé"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__display_name
@@ -190,53 +278,90 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__display_name
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Afficher le nom"
 
 #. module: l10n_tn_payroll
 #: model:hr.work.entry.type,name:l10n_tn_payroll.work_entry_type_Death
 msgid "Décès"
-msgstr ""
+msgstr "Décès"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__date_effective
 msgid "Effective Date"
-msgstr ""
+msgstr "Date d'entrée en vigueur"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_hr_employee
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__employee_id
 msgid "Employee"
-msgstr ""
+msgstr "Employé"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_hr_contract
 msgid "Employee Contract"
-msgstr ""
+msgstr "Contrat de l'employé"
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields,help:l10n_tn_payroll.field_hr_payslip__hourly_wage
+msgid "Employee's hourly gross wage."
+msgstr "Salaire horaire brut de l'employé."
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields,help:l10n_tn_payroll.field_hr_payslip__wage
+msgid "Employee's monthly gross wage."
+msgstr "Salaire brut mensuel de l'employé."
+
+#. module: l10n_tn_payroll
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_disabled_child
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_disabled_child_cumulatif
+msgid "Enfant Handicapé"
+msgstr "Enfant Handicapé"
+
+#. module: l10n_tn_payroll
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_student
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_student_cumulatif
+msgid "Enfant Étudiant"
+msgstr "Enfant Étudiant"
+
+#. module: l10n_tn_payroll
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_children
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_children_cumulatif
+msgid "Enfants à charge"
+msgstr "Enfants à charge"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_overtime_hours_100
+#: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_overtime_hours_100_cumulatif
 msgid "HEURES SUPPLEMENTAIRES 100%"
-msgstr ""
+msgstr "HEURES SUPPLEMENTAIRES 100%"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_overtime_hours_25
+#: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_overtime_hours_25_cumulatif
 msgid "HEURES SUPPLEMENTAIRES 25%"
-msgstr ""
+msgstr "HEURES SUPPLEMENTAIRES 25%"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_overtime_hours_50
+#: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_overtime_hours_50_cumulatif
 msgid "HEURES SUPPLEMENTAIRES 50%"
-msgstr ""
+msgstr "HEURES SUPPLEMENTAIRES 50%"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee__head_of_the_family
+#: model:ir.model.fields,help:l10n_tn_payroll.field_hr_employee__head_of_the_family
 msgid "Head of the family"
-msgstr ""
+msgstr "Chef de famille"
 
 #. module: l10n_tn_payroll
 #: model:hr.work.entry.type,name:l10n_tn_payroll.work_entry_type_overtime_in_holiday
 msgid "Heures supplémentaires pendant les jours fériés"
-msgstr ""
+msgstr "Heures supplémentaires pendant les jours fériés"
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_payslip__hourly_wage
+msgid "Hourly Wage"
+msgstr "Salaire horaire"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__id
@@ -244,37 +369,36 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__id
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__id
 msgid "ID"
-msgstr ""
-
-#. module: l10n_tn_payroll
-#: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_conveyance_allowance
-msgid "INDEMNITE DE TRANSPORT"
-msgstr ""
+msgstr "ID"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_irpp
-msgid "IRPP"
-msgstr ""
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_irpp_cumulatif
+msgid "IMPOT SUR REVENU"
+msgstr "IMPOT SUR REVENU"
+
+#. module: l10n_tn_payroll
+#: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_conveyance_allowance
+#: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_conveyance_allowance_cumulatif
+msgid "INDEMNITE DE TRANSPORT"
+msgstr "INDEMNITE DE TRANSPORT"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_irpp
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_irpp_cumulatif
 msgid "IRPP ANNUEL"
-msgstr ""
+msgstr "IRPP ANNUEL"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_public_holiday
+#: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_public_holiday_cumulatif
 msgid "JOUR FERIE"
-msgstr ""
-
-#. module: l10n_tn_payroll
-#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "John123"
-msgstr ""
+msgstr "JOUR FERIE"
 
 #. module: l10n_tn_payroll
 #: model:hr.work.entry.type,name:l10n_tn_payroll.work_entry_type_public_holiday
 msgid "Jour Férié"
-msgstr ""
+msgstr "Jour Férié"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__write_uid
@@ -282,7 +406,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__write_uid
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Dernière mise à jour par"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__write_date
@@ -290,137 +414,170 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__write_date
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee_agreement__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Dernière mise à jour le"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_collective_level
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__name
 msgid "Level"
-msgstr ""
+msgstr "Niveau"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_category__level_ids
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.view_collective_agreement_form
 msgid "Levels"
-msgstr ""
+msgstr "Niveaux"
 
 #. module: l10n_tn_payroll
 #: model:hr.work.entry.type,name:l10n_tn_payroll.work_entry_type_wedding
 msgid "Mariage"
-msgstr ""
+msgstr "Mariage"
 
 #. module: l10n_tn_payroll
-#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "Montant"
-msgstr ""
+#: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_payslip__marital
+msgid "Marital Status"
+msgstr "État matrimonial"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_agreement__name
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. module: l10n_tn_payroll
-#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "Non"
-msgstr ""
+#: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee__student
+msgid "Number of children studying"
+msgstr "Nombre d'enfants qui étudient"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_payroll_structure_type__number_of_months_of_salary
 msgid "Number of months of salary per year"
-msgstr ""
-
-#. module: l10n_tn_payroll
-#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "Oui"
-msgstr ""
+msgstr "Nombre de mois de salaire par an"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_attendance_allowance
+#: model:hr.salary.rule,name:l10n_tn_payroll.hr_salary_rule_attendance_allowance_cumulatif
 msgid "PRIME DE PRESENCE"
-msgstr ""
+msgstr "PRIME DE PRESENCE"
+
+#. module: l10n_tn_payroll
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_parent_in_charge
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_parent_in_charge_cumulatif
+msgid "Parent en charge"
+msgstr "Parent en charge"
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee__parent_in_charge
+#: model:ir.model.fields,help:l10n_tn_payroll.field_hr_employee__parent_in_charge
+msgid "Parent in charge"
+msgstr "Parent en charge"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_hr_payslip
 msgid "Pay Slip"
-msgstr ""
+msgstr "Fiche de paie"
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_contract__payment_type
+#: model:ir.model.fields,help:l10n_tn_payroll.field_hr_contract__payment_type
+msgid "Payment Type"
+msgstr "Type de paiement"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_hr_payslip_line
 msgid "Payslip Line"
-msgstr ""
+msgstr "Ligne de la fiche de paie"
+
+#. module: l10n_tn_payroll
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_prime
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_prime_cumulatif
+msgid "Prime"
+msgstr "Prime"
 
 #. module: l10n_tn_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "Quantité"
-msgstr ""
+msgid "REMUNERATION"
+msgstr "REMUNERATION"
 
 #. module: l10n_tn_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "Rubrique"
-msgstr "Rubrique"
-
-#. module: l10n_tn_payroll
-#: model_terms:ir.ui.view,arch_db:l10n_tn_payroll.l10n_tn_payroll_report_payslip
-msgid "Retenues"
-msgstr ""
+msgid "RETENUE"
+msgstr "RETENUE"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_basic_salary_rule_tn
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_basic_salary_rule_tn_cumulatif
 msgid "SALAIRE DE BASE"
-msgstr ""
+msgstr "SALAIRE DE BASE"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.tn_net_salary
+#: model:hr.salary.rule,name:l10n_tn_payroll.tn_net_salary_cumulatif
 msgid "SALAIRE NET"
-msgstr ""
+msgstr "SALAIRE NET"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__salary
 msgid "Salary"
-msgstr ""
+msgstr "Salaire"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_hr_salary_rule
 msgid "Salary Rule"
-msgstr ""
+msgstr "Règle salariale"
 
 #. module: l10n_tn_payroll
 #: model:ir.model,name:l10n_tn_payroll.model_hr_payroll_structure_type
 msgid "Salary Structure Type"
-msgstr ""
+msgstr "Type de structure salariale"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,field_description:l10n_tn_payroll.field_collective_level__seniority
 msgid "Seniority (years)"
-msgstr ""
+msgstr "Ancienneté (années)"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr1_irpp
-msgid "TR1 IRPP"
-msgstr ""
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr1_irpp_cumulatif
+msgid "TRANCHE 0%"
+msgstr "TRANCHE 0%"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr2_irpp
-msgid "TR2 IRPP"
-msgstr ""
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr2_irpp_cumulatif
+msgid "TRANCHE 26%"
+msgstr "TRANCHE 26%"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr3_irpp
-msgid "TR3 IRPP"
-msgstr ""
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr3_irpp_cumulatif
+msgid "TRANCHE 28%"
+msgstr "TRANCHE 28%"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr4_irpp
-msgid "TR4 IRPP"
-msgstr ""
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr4_irpp_cumulatif
+msgid "TRANCHE 32%"
+msgstr "TRANCHE 32%"
 
 #. module: l10n_tn_payroll
 #: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr5_irpp
-msgid "TR5 IRPP"
-msgstr ""
+#: model:hr.salary.rule,name:l10n_tn_payroll.default_annual_tr5_irpp_cumulatif
+msgid "TRANCHE 35%"
+msgstr "TRANCHE 35%"
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_employee__allocation_display
+#: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_payslip__allocation_display
+msgid "Total Allocations"
+msgstr "Total des allocations"
 
 #. module: l10n_tn_payroll
 #: model:ir.model.fields,help:l10n_tn_payroll.field_hr_payslip_line__appears_on_payslip_quantity
 #: model:ir.model.fields,help:l10n_tn_payroll.field_hr_salary_rule__appears_on_payslip_quantity
 msgid "Used to display the Quantity on payslip Report."
-msgstr ""
+msgstr "Utilisé pour afficher la quantité sur le rapport de fiche de paie."
+
+#. module: l10n_tn_payroll
+#: model:ir.model.fields,field_description:l10n_tn_payroll.field_hr_payslip__wage
+msgid "Wage"
+msgstr "Salaire"

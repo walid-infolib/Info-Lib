@@ -1,8 +1,13 @@
-from odoo import models
+from odoo import fields, models
 
 
 class HrPayslip(models.Model):
     _inherit = "hr.payslip"
+
+    marital = fields.Selection(related="employee_id.marital")
+    wage = fields.Monetary(related="contract_id.wage")
+    hourly_wage = fields.Monetary(related="contract_id.hourly_wage")
+    allocation_display = fields.Char(related="employee_id.allocation_display")
 
     def _get_worked_day_lines(self, domain=None, check_out_of_contract=True):
         res = super()._get_worked_day_lines(
@@ -13,7 +18,7 @@ class HrPayslip(models.Model):
         # This is only valid in the case of Default Wage Type is monthly
         ############################################################
         if (
-            self.struct_id.type_id.wage_type == "monthly"
+            self.contract_id.wage_type == "monthly"
             and self.struct_id.type_id.default_work_entry_days
         ):
             default_work_entry_days = self.struct_id.type_id.default_work_entry_days

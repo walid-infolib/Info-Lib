@@ -9,6 +9,9 @@
             <xpath expr="//field[@name='contract_type_id']" position="after">
                 <field name="agreement_id" />
             </xpath>
+            <xpath expr="//field[@name='schedule_pay']" position="after">
+                <field name="payment_type" />
+            </xpath>
         </field>
     </record>
 

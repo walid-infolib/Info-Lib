@@ -20,7 +20,13 @@
 
         <field name="arch" type="xml">
             <field name="marital" position="after">
-                 <field name="head_of_the_family" />
+                <field name="head_of_the_family" />
+                <field name="parent_in_charge" />
+            </field>
+
+            <field name="children" position="after">
+                <field name="student" />
+                <field name="disabled_child" />
             </field>
         </field>
     </record>
