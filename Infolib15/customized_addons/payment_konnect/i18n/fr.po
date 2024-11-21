@@ -1,0 +1,267 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_konnect
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-21 15:08+0000\n"
+"PO-Revision-Date: 2024-10-21 15:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__payment_fees
+msgid ""
+"Ask the client to pay an extra amount to cover Konnect fees. This will "
+"slightly raise the amount of the payment from the payer side."
+msgstr ""
+"Demandez au client de payer un montant supplémentaire pour couvrir les frais de Konnect."
+"Cela augmentera légèrement le montant du paiement du côté du payeur."
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__checkout_form
+msgid "Ask the payer to fill a checkout form before payment."
+msgstr "Demandez au payeur de remplir un formulaire de paiement avant le paiement."
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__checkout_form
+msgid "Checkout Form"
+msgstr "Formulaire de paiement"
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_icon__code
+msgid "Code"
+msgstr "Code"
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__konnect_wallet_key
+msgid "Copy the wallet key from the Konnect organisation dashboard."
+msgstr "Copiez la clé du portefeuille depuis le tableau de bord de l'organisation Konnect."
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__theme__dark
+msgid "Dark"
+msgstr "Sombre"
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__lifespan
+msgid "Duration before the payment expires, in minutes."
+msgstr "Durée avant l'expiration du paiement, en minutes."
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Failed to initialize payment with Konnect. Please try again later."
+msgstr "Impossible d'initialiser le paiement avec Konnect. Veuillez réessayer ultérieurement."
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__konnect_api_key
+msgid "Generate an api key from the Konnect organisation dashboard."
+msgstr "Générez une clé API à partir du tableau de bord de l'organisation Konnect."
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__silent_webhook
+msgid ""
+"If this is true, Konnect will make the call to the webhook without "
+"redirecting the payer to the webhook URL."
+msgstr ""
+"Si cela est vrai, Konnect effectuera l’appel au webhook sans rediriger le payeur vers l’URL du webhook."
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__type__immediate
+msgid "Immediate"
+msgstr "Immédiatement"
+
+#. module: payment_konnect
+#: model:account.payment.method,name:payment_konnect.payment_method_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__provider__konnect
+#: model:payment.acquirer,name:payment_konnect.payment_acquirer_konnect
+msgid "Konnect"
+msgstr "Konnect"
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__konnect_api_key
+msgid "Konnect Api Key"
+msgstr "Clé API Konnect"
+
+#. module: payment_konnect
+#: model:payment.acquirer,display_as:payment_konnect.payment_acquirer_konnect
+msgid "Konnect Payment"
+msgstr "Paiement Konnect"
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__konnect_wallet_key
+msgid "Konnect Wallet Key"
+msgstr "Clé de portefeuille Konnect"
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__lifespan
+msgid "Lifespan"
+msgstr "Durée de vie"
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__theme__light
+msgid "Light"
+msgstr "Clair"
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "No transaction found matching reference %s."
+msgstr "Aucune transaction trouvée correspondant à la référence"
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__type__partial
+msgid "Partial"
+msgstr "Partiellement"
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Intermédiaire de Paiement"
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__payment_fees
+msgid "Payment Fees"
+msgstr "Frais de paiement"
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_payment_icon
+msgid "Payment Icon"
+msgstr "Icône de paiement"
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_account_payment_method
+msgid "Payment Methods"
+msgstr "Méthodes de paiements"
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Transaction "
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Payment completed successfully. Thank you!"
+msgstr "Paiement effectué avec succès. Merci !"
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"Payment has failed. Please try again later or contact our support team."
+msgstr ""
+"Le paiement a échoué. Veuillez réessayer plus tard ou contacter notre équipe"
+" d'assistance."
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Payment is currently pending. Please complete the payment."
+msgstr ""
+"Le paiement est actuellement en attente. Veuillez finaliser le paiement."
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Payment status is missing from the response. Please contact support."
+msgstr ""
+"Le statut du paiement est manquant dans la réponse. Veuillez contacter le "
+"support."
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__provider
+msgid "Provider"
+msgstr "Fournisseur"
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"Received invalid response from Konnect payment acquirer. Please contact "
+"support."
+msgstr ""
+"Réponse non valide reçue de l'acquéreur de paiement Konnect. Veuillez contacter le support."
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"Received invalid response from the payment acquirer. Please contact support."
+msgstr ""
+"Réponse non valide reçue de l'acquéreur du paiement. Veuillez contacter le support."
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__silent_webhook
+msgid "Silent Webhook"
+msgstr "Webhook Silencieux"
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__provider
+msgid "The Payment Service Provider to use with this acquirer"
+msgstr ""
+"Le fournisseur de services de paiement à utiliser avec cet intermédiaire"
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "The customer left the Konnect payment page."
+msgstr "Le client a quitté la page de paiement Konnect."
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__theme
+msgid "Theme"
+msgstr "Thème"
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"There was an issue contacting the payment acquirer. Please try again later."
+msgstr ""
+"Un problème est survenu lors de la prise de contact avec l'acquéreur du paiement. Veuillez réessayer ultérieurement."
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__transaction_description
+msgid "Transaction Description"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__type
+msgid "Transaction Type"
+msgstr "Description de la transaction"
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Unknown payment status received: %s. Please contact support."
+msgstr "Statut de paiement inconnu reçu: %s. Veuillez contacter le support."
+
+#. module: payment_konnect
+#: model_terms:payment.acquirer,auth_msg:payment_konnect.payment_acquirer_konnect
+msgid "Your payment has been authorized."
+msgstr "Votre paiement a été autorisé."
+
+#. module: payment_konnect
+#: model_terms:payment.acquirer,cancel_msg:payment_konnect.payment_acquirer_konnect
+msgid "Your payment has been cancelled."
+msgstr "Votre paiement a été annulé."
+
+#. module: payment_konnect
+#: model_terms:payment.acquirer,pending_msg:payment_konnect.payment_acquirer_konnect
+msgid ""
+"Your payment has been successfully processed but is waiting for approval."
+msgstr ""
+"Votre paiement a été traité avec succès mais est en attente d'approbation."
+
+#. module: payment_konnect
+#: model_terms:payment.acquirer,done_msg:payment_konnect.payment_acquirer_konnect
+msgid "Your payment has been successfully processed. Thank you!"
+msgstr "Votre paiement a été traité avec succès. Merci !"

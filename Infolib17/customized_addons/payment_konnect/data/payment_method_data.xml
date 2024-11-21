@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_method_bank_card" model="payment.method">
+        <field name="name">Bank Card</field>
+        <field name="code">bank_card</field>
+        <field name="sequence">1</field>
+        <field name="active">True</field>
+        <field name="image" type="base64" file="payment_konnect/static/img/bank_card.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="support_express_checkout">False</field>
+        <field name="supported_currency_ids"
+               eval="[Command.set([
+                         ref('base.USD'),
+                         ref('base.EUR'),
+                         ref('base.TND'),
+                     ])]"
+        />
+        <field name="supported_country_ids"
+               eval="[Command.set([
+                         ref('base.tn'),
+                     ])]"
+        />
+    </record>
+
+    <record id="payment_method_e_dinar" model="payment.method">
+        <field name="name">E-DINAR</field>
+        <field name="code">e-dinar</field>
+        <field name="sequence">2</field>
+        <field name="active">True</field>
+        <field name="image" type="base64" file="payment_konnect/static/img/e_dinar.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="support_express_checkout">False</field>
+        <field name="supported_currency_ids"
+               eval="[Command.set([
+                         ref('base.USD'),
+                         ref('base.EUR'),
+                         ref('base.TND'),
+                     ])]"
+        />
+        <field name="supported_country_ids"
+               eval="[Command.set([
+                         ref('base.tn'),
+                     ])]"
+        />
+    </record>
+
+    <record id="payment_method_flouci" model="payment.method">
+        <field name="name">Flouci</field>
+        <field name="code">flouci</field>
+        <field name="sequence">3</field>
+        <field name="active">True</field>
+        <field name="image" type="base64" file="payment_konnect/static/img/flouci.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="support_express_checkout">False</field>
+        <field name="supported_currency_ids"
+               eval="[Command.set([
+                         ref('base.USD'),
+                         ref('base.EUR'),
+                         ref('base.TND'),
+                     ])]"
+        />
+        <field name="supported_country_ids"
+               eval="[Command.set([
+                         ref('base.tn'),
+                     ])]"
+        />
+    </record>
+
+    <record id="payment_method_wallet" model="payment.method">
+        <field name="name">Wallet</field>
+        <field name="code">wallet</field>
+        <field name="sequence">4</field>
+        <field name="active">True</field>
+        <field name="image" type="base64" file="payment_konnect/static/img/wallet.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="support_express_checkout">False</field>
+        <field name="supported_currency_ids"
+               eval="[Command.set([
+                         ref('base.USD'),
+                         ref('base.EUR'),
+                         ref('base.TND'),
+                     ])]"
+        />
+        <field name="supported_country_ids"
+               eval="[Command.set([
+                         ref('base.tn'),
+                     ])]"
+        />
+    </record>
+
+</odoo>

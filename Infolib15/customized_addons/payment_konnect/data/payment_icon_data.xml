@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_icon_cc_bank_card" model="payment.icon">
+        <field name="sequence">1</field>
+        <field name="name">Bank Card</field>
+        <field name="code">bank_card</field>
+        <field name="image" type="base64" file="payment_konnect/static/img/bank_card.png"/>
+    </record>
+
+    <record id="payment_icon_cc_e_dinar" model="payment.icon">
+        <field name="sequence">2</field>
+        <field name="name">E-DINAR</field>
+        <field name="code">e-DINAR</field>
+        <field name="image" type="base64" file="payment_konnect/static/img/e_dinar.png"/>
+    </record>
+
+    <record id="payment_icon_cc_flouci" model="payment.icon">
+        <field name="sequence">3</field>
+        <field name="name">Flouci</field>
+        <field name="code">flouci</field>
+        <field name="image" type="base64" file="payment_konnect/static/img/flouci.png"/>
+    </record>
+
+    <record id="payment_icon_cc_wallet" model="payment.icon">
+        <field name="sequence">4</field>
+        <field name="name">Wallet</field>
+        <field name="code">wallet</field>
+        <field name="image" type="base64" file="payment_konnect/static/img/wallet.png"/>
+    </record>
+
+</odoo>

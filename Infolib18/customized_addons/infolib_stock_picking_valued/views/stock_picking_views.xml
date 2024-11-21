@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_picking_form_inherit_stock_picking_valued" model="ir.ui.view">
+            <field name="name">delivery.inherit.stock</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="delivery_report_valued" invisible="1"/>
+                </field>
+                <xpath expr="//field[@name='move_ids_without_package']/list/field[@name='quantity']"
+                       position="after">
+                    <field name="currency_id" invisible="1"/>
+                    <field name="price_unit" optional="show" column_invisible="not parent.delivery_report_valued"/>
+                    <field name="tax_id" widget="many2many_tags"
+                           optional="show" column_invisible="not parent.delivery_report_valued"/>
+                    <field name="discount" string="Disc.%" optional="show" column_invisible="not parent.delivery_report_valued"/>
+                    <field name="price_subtotal" widget="monetary" optional="show" column_invisible="not parent.delivery_report_valued"/>
+                    <field name="price_tax" optional="show" column_invisible="not parent.delivery_report_valued"/>
+                    <field name="price_total" widget="monetary" optional="show" column_invisible="not parent.delivery_report_valued"/>
+                </xpath>
+
+                <xpath expr="//field[@name='move_ids_without_package']" position="after">
+                    <div class="col-8 offset-8" invisible="not delivery_report_valued">
+                        <group class="oe_subtotal_footer" string="Total">
+                            <field name="currency_id" invisible="1"/>
+                            <field name="tax_totals" widget="account-tax-totals-field" nolabel="1"
+                                   colspan="2"
+                                   readonly="1"/>
+                        </group>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

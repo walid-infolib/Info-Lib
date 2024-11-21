@@ -1,0 +1,254 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_konnect
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-21 15:08+0000\n"
+"PO-Revision-Date: 2024-10-21 15:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__payment_fees
+msgid ""
+"Ask the client to pay an extra amount to cover Konnect fees. This will "
+"slightly raise the amount of the payment from the payer side."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__checkout_form
+msgid "Ask the payer to fill a checkout form before payment."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__checkout_form
+msgid "Checkout Form"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_icon__code
+msgid "Code"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__konnect_wallet_key
+msgid "Copy the wallet key from the Konnect organisation dashboard."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__theme__dark
+msgid "Dark"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__lifespan
+msgid "Duration before the payment expires, in minutes."
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Failed to initialize payment with Konnect. Please try again later."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__konnect_api_key
+msgid "Generate an api key from the Konnect organisation dashboard."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__silent_webhook
+msgid ""
+"If this is true, Konnect will make the call to the webhook without "
+"redirecting the payer to the webhook URL."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__type__immediate
+msgid "Immediate"
+msgstr ""
+
+#. module: payment_konnect
+#: model:account.payment.method,name:payment_konnect.payment_method_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__provider__konnect
+#: model:payment.acquirer,name:payment_konnect.payment_acquirer_konnect
+msgid "Konnect"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__konnect_api_key
+msgid "Konnect Api Key"
+msgstr ""
+
+#. module: payment_konnect
+#: model:payment.acquirer,display_as:payment_konnect.payment_acquirer_konnect
+msgid "Konnect Payment"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__konnect_wallet_key
+msgid "Konnect Wallet Key"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__lifespan
+msgid "Lifespan"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__theme__light
+msgid "Light"
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "No transaction found matching reference %s."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_acquirer__type__partial
+msgid "Partial"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__payment_fees
+msgid "Payment Fees"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_payment_icon
+msgid "Payment Icon"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_account_payment_method
+msgid "Payment Methods"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_payment_transaction
+msgid "Payment Transaction"
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Payment completed successfully. Thank you!"
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"Payment has failed. Please try again later or contact our support team."
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Payment is currently pending. Please complete the payment."
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Payment status is missing from the response. Please contact support."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__provider
+msgid "Provider"
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"Received invalid response from Konnect payment acquirer. Please contact "
+"support."
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"Received invalid response from the payment acquirer. Please contact support."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__silent_webhook
+msgid "Silent Webhook"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_acquirer__provider
+msgid "The Payment Service Provider to use with this acquirer"
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "The customer left the Konnect payment page."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__theme
+msgid "Theme"
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid ""
+"There was an issue contacting the payment acquirer. Please try again later."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__transaction_description
+msgid "Transaction Description"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_acquirer__type
+msgid "Transaction Type"
+msgstr ""
+
+#. module: payment_konnect
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+#, python-format
+msgid "Unknown payment status received: %s. Please contact support."
+msgstr ""
+
+#. module: payment_konnect
+#: model_terms:payment.acquirer,auth_msg:payment_konnect.payment_acquirer_konnect
+msgid "Your payment has been authorized."
+msgstr ""
+
+#. module: payment_konnect
+#: model_terms:payment.acquirer,cancel_msg:payment_konnect.payment_acquirer_konnect
+msgid "Your payment has been cancelled."
+msgstr ""
+
+#. module: payment_konnect
+#: model_terms:payment.acquirer,pending_msg:payment_konnect.payment_acquirer_konnect
+msgid ""
+"Your payment has been successfully processed but is waiting for approval."
+msgstr ""
+
+#. module: payment_konnect
+#: model_terms:payment.acquirer,done_msg:payment_konnect.payment_acquirer_konnect
+msgid "Your payment has been successfully processed. Thank you!"
+msgstr ""

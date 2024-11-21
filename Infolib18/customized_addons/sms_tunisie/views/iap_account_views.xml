@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="iap_account_view_form" model="ir.ui.view">
+        <field name="model">iap.account</field>
+        <field name="inherit_id" ref="iap.iap_account_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='account']" position="after">
+                <group string="App SMS Tunisie account" name="app" invisible="provider != 'sms_app_tunis'">
+                    <field name="sms_app_tunis_endpoint"/>
+                    <field name="sms_app_tunis_sender"/>
+                    <field name="sms_app_tunis_key"/>
+                    <field name="service_id"/>
+                </group>
+            </xpath>
+            <xpath expr="//group[@name='account']" position="before">
+                <group string="Info" name="info">
+                    <field name="provider"/>
+                    <field
+                            name="company_ids"
+                            widget="many2many_tags"
+                            domain="[('id', 'in', allowed_company_ids)]"
+                            position="move"
+                    />
+                </group>
+            </xpath>
+            <xpath expr="//group[@name='account']" position="attributes">
+                <attribute name="invisible">provider != 'odoo'</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

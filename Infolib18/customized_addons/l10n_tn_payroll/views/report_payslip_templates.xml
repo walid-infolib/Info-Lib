@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="l10n_tn_payroll_report_payslip" inherit_id="hr_payroll.report_payslip">
+        <xpath expr="//table/tbody/tr/td/div[@id='employee_marital']" position="after">
+            <div id="employee_pro_category">
+                <strong class="me-2">Catégorie:</strong>
+                <span t-field="o.employee_id.pro_category"/>
+            </div>
+            <div id="employee_rip">
+                <strong class="me-2">RIB/ RIP:</strong>
+                <span t-field="o.employee_id.bank_account_id.acc_number"/>
+            </div>
+            <div id="employee_ssnid">
+                <strong class="me-2">N° C.N.S.S:</strong>
+                <span t-field="o.employee_id.ssnid"/>
+            </div>
+            <div id="employee_head_of_the_family">
+                <strong class="me-2">Chef de famille:</strong>
+                <span t-field="o.employee_id.head_of_the_family"/>
+            </div>
+        </xpath>
+        <xpath expr="//table/thead/tr/th[@id='line_header_name']" position="replace">
+            <th id="line_header_name" >Rubrique</th>
+        </xpath>
+        <xpath expr="//table/thead/tr/th[@id='line_header_amount']" position="replace">
+            <th id="line_header_quantity_tn">Quantité</th>
+        </xpath>
+        <xpath expr="//table/thead/tr/th[@id='line_header_quantity']" position="replace">
+            <th id="line_header_amount_tn" class="text-end">Montant</th>
+        </xpath>
+        <xpath expr="//table/thead/tr/th[@id='line_header_total']" position="replace">
+            <th id="line_header_deductions" class="text-end">Retenues</th>
+        </xpath>
+        <xpath expr="//table/thead/tr/th[@id='line_header_rate']" position="replace">
+        </xpath>
+        <xpath expr="//table/tbody/span/tr/td[@id='payslip_line_rate']" position="replace">
+        </xpath>
+
+        <xpath expr="//div[@id='worked_days_table']" position="replace">
+        </xpath>
+
+        <xpath expr="//table/tbody/span/tr/td[@id='payslip_line_amount']" position="replace">
+            <td id="payslip_line_quantity_tn"><span t-if="line.appears_on_payslip_quantity" t-esc="line.quantity"/></td>
+        </xpath>
+        <xpath expr="//table/tbody/span/tr/td[@id='payslip_line_quantity']" position="replace">
+            <td id="payslip_line_total_tn" class="text-end"><span t-if="line.total >0" t-esc="line.total"
+                                            t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/>
+            </td>
+        </xpath>
+
+        <xpath expr="//table/tbody/span/tr/td[@id='payslip_line_total']" position="replace">
+            <td id="payslip_line_retenue" class="text-end"><span t-if="line.total &lt;= 0" t-esc="line.total*-1"
+                                            t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/>
+            </td>
+        </xpath>
+    </template>
+</odoo>

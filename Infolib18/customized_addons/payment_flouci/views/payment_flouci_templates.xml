@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="redirect_form">
+        <form t-att-action="api_url" method="get">
+            <input type="hidden" name="payment_id" t-att-value="payment_id"/>
+        </form>
+    </template>
+
+</odoo>

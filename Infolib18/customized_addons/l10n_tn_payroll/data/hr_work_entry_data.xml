@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- Work Entry Type -->
+        <record id="work_entry_type_public_holiday" model="hr.work.entry.type">
+            <field name="name">Jour Férié</field>
+            <field name="color">3</field>
+            <field name="code">PublicHoliday</field>
+        </record>
+        <record id="work_entry_type_overtime_in_holiday" model="hr.work.entry.type">
+            <field name="name">Heures supplémentaires pendant les jours fériés</field>
+            <field name="color">3</field>
+            <field name="code">OVERTIME_IN_PublicHoliday</field>
+        </record>
+         <record id="work_entry_type_wedding" model="hr.work.entry.type">
+            <field name="name">Mariage</field>
+            <field name="color">3</field>
+            <field name="code">Wedding</field>
+        </record>
+
+        <record id="work_entry_type_Death" model="hr.work.entry.type">
+            <field name="name">Décès</field>
+            <field name="color">5</field>
+            <field name="code">Death</field>
+        </record>
+    </data>
+</odoo>

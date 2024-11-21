@@ -1,0 +1,78 @@
+<odoo>
+    <record id="view_cnss_list" model="ir.ui.view">
+        <field name="name">hr.cnss.list.view</field>
+        <field name="model">hr.cnss</field>
+        <field name="arch" type="xml">
+            <list string="CNSS declaration">
+                <field name="quarter"/>
+                <field name="year"/>
+                <field name="date"/>
+                <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-success="state == 'done'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_cnss_form" model="ir.ui.view">
+        <field name="name">hr.cnss.form.view</field>
+        <field name="model">hr.cnss</field>
+        <field name="arch" type="xml">
+            <form string="CNSS declaration">
+                <header>
+                    <button string="Print" name="action_print_declaration_cnss" type="object"/>
+                    <button string="Mark as Draft" name="action_draft" type="object"
+                        invisible="state != 'done'"/>
+                    <button string="Generate file" name="generate_info_file" type="object" class="oe_stat_button" invisible="state != 'draft'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group col="4">
+                            <field name="quarter" required="1" readonly="state == 'done'"/>
+                            <field name="contract_type_id" required="1" readonly="state == 'done'"/>
+                        </group>
+                        <group>
+                            <field name="year" required="1" readonly="state == 'done'"/>
+                            <field name="date" required="1" readonly="state == 'done'"/>
+                        </group>
+                    </group>
+                     <field name="line_ids" nolabel="1" colspan="4" readonly="1" force_save="1">
+                        <list>
+                            <field name="page"/>
+                            <field name="line"/>
+                            <field name="ssnid"/>
+                            <field name="employee_id"/>
+                            <field name="registration_number"/>
+                            <field name="pro_category"/>
+                            <field name="gross_1"/>
+                            <field name="gross_2"/>
+                            <field name="gross_3"/>
+                            <field name="total"/>
+                            <field name="company_id"/>
+                            <field name="currency_id" column_invisible="True"/>
+                        </list>
+                     </field>
+                </sheet>
+                <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="cnss_action" model="ir.actions.act_window">
+        <field name="name">hr.cnss</field>
+        <field name="res_model">hr.cnss</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+            id="cnss_menu"
+            action="cnss_action"
+            name="CNSS Declaration"
+            parent="hr_payroll.menu_hr_payroll_payslips"
+            sequence ="81"
+    />
+
+</odoo>

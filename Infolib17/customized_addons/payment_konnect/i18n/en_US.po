@@ -1,0 +1,247 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_konnect
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-03 16:56+0000\n"
+"PO-Revision-Date: 2024-10-03 16:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_provider__payment_fees
+msgid ""
+"Ask the client to pay an extra amount to cover Konnect fees. This will "
+"slightly raise the amount of the payment from the payer side."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_provider__checkout_form
+msgid "Ask the payer to fill a checkout form before payment."
+msgstr ""
+
+#. module: payment_konnect
+#: model:payment.method,name:payment_konnect.payment_method_bank_card
+msgid "Bank Card"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__checkout_form
+msgid "Checkout Form"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__code
+msgid "Code"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_provider__konnect_wallet_key
+msgid "Copy the wallet key from the Konnect organisation dashboard."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_provider__theme__dark
+msgid "Dark"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__description
+msgid "Description"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_provider__lifespan
+msgid "Duration before the payment expires, in minutes."
+msgstr ""
+
+#. module: payment_konnect
+#: model:payment.method,name:payment_konnect.payment_method_e_dinar
+msgid "E-DINAR"
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid "Failed to initialize payment with Konnect. Please try again later."
+msgstr ""
+
+#. module: payment_konnect
+#: model:payment.method,name:payment_konnect.payment_method_flouci
+msgid "Flouci"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_provider__konnect_api_key
+msgid "Generate an api key from the Konnect organisation dashboard."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_provider__silent_webhook
+msgid ""
+"If this is true, Konnect will make the call to the webhook without "
+"redirecting the payer to the webhook URL."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_provider__type__immediate
+msgid "Immediate"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_provider__code__konnect
+#: model:payment.provider,name:payment_konnect.payment_provider_konnect
+msgid "Konnect"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__konnect_api_key
+msgid "Konnect Api Key"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__konnect_wallet_key
+msgid "Konnect Wallet Key"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__lifespan
+msgid "Lifespan"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_provider__theme__light
+msgid "Light"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields.selection,name:payment_konnect.selection__payment_provider__type__partial
+msgid "Partial"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__payment_fees
+msgid "Payment Fees"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_payment_provider
+msgid "Payment Provider"
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model,name:payment_konnect.model_payment_transaction
+msgid "Payment Transaction"
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid "Payment completed successfully. Thank you!"
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid ""
+"Payment has failed. Please try again later or contact our support team."
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid "Payment is currently pending. Please complete the payment."
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid "Payment status is missing from the response. Please contact support."
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid ""
+"Received invalid response from Konnect payment provider. Please contact "
+"support."
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid ""
+"Received invalid response from the payment provider. Please contact support."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__silent_webhook
+msgid "Silent Webhook"
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid "The customer left the Konnect payment page."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,help:payment_konnect.field_payment_provider__code
+msgid "The technical code of this payment provider."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__theme
+msgid "Theme"
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid ""
+"There was an issue contacting the payment provider. Please try again later."
+msgstr ""
+
+#. module: payment_konnect
+#: model:ir.model.fields,field_description:payment_konnect.field_payment_provider__type
+msgid "Transaction type"
+msgstr ""
+
+#. module: payment_konnect
+#. odoo-python
+#: code:addons/payment_konnect/models/payment_transaction.py:0
+msgid "Unknown payment status received: %s. Please contact support."
+msgstr ""
+
+#. module: payment_konnect
+#: model:payment.method,name:payment_konnect.payment_method_wallet
+msgid "Wallet"
+msgstr ""
+
+#. module: payment_konnect
+#: model_terms:payment.provider,auth_msg:payment_konnect.payment_provider_konnect
+msgid "Your payment has been authorized."
+msgstr ""
+
+#. module: payment_konnect
+#: model_terms:payment.provider,cancel_msg:payment_konnect.payment_provider_konnect
+msgid "Your payment has been cancelled."
+msgstr ""
+
+#. module: payment_konnect
+#: model_terms:payment.provider,pending_msg:payment_konnect.payment_provider_konnect
+msgid ""
+"Your payment has been successfully processed but is waiting for approval."
+msgstr ""
+
+#. module: payment_konnect
+#: model_terms:payment.provider,done_msg:payment_konnect.payment_provider_konnect
+msgid "Your payment has been successfully processed."
+msgstr ""

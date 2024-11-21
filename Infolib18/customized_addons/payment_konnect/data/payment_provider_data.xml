@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_provider_konnect" model="payment.provider">
+        <field name="name">Konnect</field>
+        <field name="code">konnect</field>
+        <field name="image_128"
+               type="base64"
+               file="payment_konnect/static/description/icon.png"
+        />
+        <field name="module_id" ref="base.module_payment_konnect"/>
+        <field name="redirect_form_view_id" ref="redirect_form" />
+        <field name="payment_method_ids"
+               eval="[(6, 0, [
+                   ref('payment_konnect.payment_method_bank_card'),
+                   ref('payment_konnect.payment_method_e_dinar'),
+                   ref('payment_konnect.payment_method_flouci'),
+                   ref('payment_konnect.payment_method_wallet'),
+               ])]"
+        />
+        <field name="available_currency_ids" eval="[(6, 0, [
+                ref('base.USD'),
+                ref('base.EUR'),
+                ref('base.TND')
+            ])]"
+        />
+        <field name="available_country_ids" eval="[(6, 0, [
+                ref('base.tn')
+            ])]"
+        />
+    </record>
+
+</odoo>
